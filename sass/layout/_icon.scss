@@ -1,0 +1,60 @@
+/* Mise en page des icons */
+
+#contact {
+    margin-top: 110px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+        overflow: hidden;
+        height: 80px;
+        align-items: center;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        visibility: hidden;
+    }
+
+    & i {
+        font-size: 60px;
+        animation: socialMedias 2s ease-in-out;
+        visibility: hidden;
+        animation-delay: 5.5s;
+    }
+
+    @keyframes socialMedias {
+        0% {
+            translate: -70px;
+            rotate: 230deg;
+        }
+        10% {
+            opacity: 1;
+        }
+
+        20% {
+            translate: 10px;
+            rotate: 410deg;
+        }
+        40% {
+            translate: -10px;
+            rotate: 317deg;
+        }
+        60% {
+            translate: 5px;
+            rotate: 377deg;
+        }
+        80% {
+            translate: -5px;
+            rotate: 338deg;
+        }
+        100% {
+            visibility: visible;
+            rotate: 360deg;
+        }
+    }
+}
+
+.not-hide {
+    visibility: visible !important;
+}

@@ -1,0 +1,84 @@
+/* Configuration du header */
+
+header {
+    position: fixed;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+
+    & a {
+        position: relative;
+        transition: 0.3s;
+        width: 43%;
+        font-size: 17px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        animation: fallingLinks 0.3s forwards;
+        visibility: hidden;
+        animation-delay: 4.5s;
+    }
+
+    & a:nth-child(2) {
+        animation: fallingLinks 0.3s forwards;
+        animation-delay: 4.6s;
+    }
+
+    & a:nth-child(3) {
+        animation: fallingLinks 0.3s forwards;
+        animation-delay: 4.7s;
+    }
+
+    & a:nth-child(4) {
+        animation: fallingLinks 0.3s forwards;
+        animation-delay: 4.8s;
+    }
+
+    .active {
+        background-color: white;
+        color: #4f1414;
+    }
+
+    & a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: white;
+        transition: 0.5s;
+        z-index: -2;
+    }
+    & a:hover::after {
+        width: 100%;
+    }
+    & a:hover {
+        color: #4f1414;
+    }
+    & .portfolio-logo {
+        font-family: "Shadows Into Light", cursive;
+        font-size: 80px;
+    }
+    & .liens {
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+    }
+
+    @keyframes fallingLinks {
+        0% {
+            transform: translateY(-130px);
+        }
+        50% {
+            visibility: hidden;
+        }
+        100% {
+            transform: translateY(0px);
+            visibility: visible;
+        }
+    }
+}

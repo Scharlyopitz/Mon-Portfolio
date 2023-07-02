@@ -1,0 +1,59 @@
+/* Mise en page de ma présentation */
+
+#presentation {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+
+    & h1 {
+        animation: fallingTitle 1s forwards;
+        animation-delay: 4.8s;
+    }
+
+    & p {
+        visibility: hidden;
+        animation: fallingTitle 1s forwards;
+        animation-delay: 5.3s;
+    }
+
+    @keyframes fallingTitle {
+        0% {
+            transform: translateY(-80px);
+        }
+        100% {
+            transform: translateY(0px);
+            visibility: visible;
+        }
+    }
+
+    & .title1 {
+        overflow: hidden;
+
+        & h1 {
+            transform: translateY(-80px);
+            font-size: 25px;
+            font-family: "Shadows Into Light", cursive;
+            font-weight: 100;
+        }
+    }
+
+    & .title2 {
+        overflow: hidden;
+
+        & h1 {
+            animation: fallingTitle 0.7s forwards;
+            font-size: 90px;
+            transform: translateY(-105px);
+            animation-delay: 5.3s;
+        }
+    }
+
+    & .title3 {
+        font-size: 30px;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+}
