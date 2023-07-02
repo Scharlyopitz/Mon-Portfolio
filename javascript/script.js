@@ -1,7 +1,5 @@
 // *********** Changement d'image au survol de la souris ***********
 
-const body = document.querySelector("body");
-
 const imageDisplay = document.querySelector(".image-display");
 
 const liens = document.querySelectorAll("header a");
