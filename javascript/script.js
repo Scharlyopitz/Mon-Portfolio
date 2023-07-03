@@ -19,6 +19,7 @@ liens.forEach((lien) => {
     lien.addEventListener("click", () => {
         liens.forEach((buttons) => {
             buttons.classList.remove("active");
+            imageDisplay.style.backgroundImage = `url(images/${pays}.jpg) `;
             pageTransition();
         });
         lien.classList.add("active");
@@ -28,13 +29,14 @@ liens.forEach((lien) => {
 // fonction animation changement de page
 
 function pageTransition() {
+    containerImage.style.zIndex = "500";
     containerImage.style.top = "50%";
     containerImage.style.right = "50%";
     containerImage.style.transform = "translate(50%,-50%)";
-    // containerImage.style.width = "100%";
-    // containerImage.style.height = "100%";
-    // imageDisplay.style.width = "100%";
-    // imageDisplay.style.height = "100%";
+    imageDisplay.style.width = "100vw";
+    imageDisplay.style.height = "100vh";
+    imageDisplay.style.borderRadius = "0";
+    // imageDisplay.style.animation = "none";
 }
 
 // Instagram
