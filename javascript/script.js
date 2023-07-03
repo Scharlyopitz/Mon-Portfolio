@@ -22,6 +22,10 @@ liens.forEach((lien) => {
             imageDisplay.style.backgroundImage = `url(images/${pays}.jpg) `;
             pageTransition();
         });
+
+        // ajout d'une class pour modifier l'apparence de l'image au changement de page
+        imageDisplay.classList.add("no-animation");
+
         lien.classList.add("active");
     });
 });
@@ -36,7 +40,6 @@ function pageTransition() {
     imageDisplay.style.width = "100vw";
     imageDisplay.style.height = "100vh";
     imageDisplay.style.borderRadius = "0";
-    // imageDisplay.style.animation = "none";
 }
 
 // Instagram
