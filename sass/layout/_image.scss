@@ -9,6 +9,7 @@
     animation: imageDisplay 2s ease-in-out;
     animation-delay: 5.2s;
     visibility: hidden;
+    transition: 0.5s;
 
     & .image-display {
         width: 400px;

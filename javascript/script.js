@@ -19,10 +19,23 @@ liens.forEach((lien) => {
     lien.addEventListener("click", () => {
         liens.forEach((buttons) => {
             buttons.classList.remove("active");
+            pageTransition();
         });
         lien.classList.add("active");
     });
 });
+
+// fonction animation changement de page
+
+function pageTransition() {
+    // containerImage.style.top = "0";
+    // containerImage.style.right = "0";
+    // containerImage.style.width = "100%";
+    // containerImage.style.height = "100%";
+    // imageDisplay.style.width = "100%";
+    // imageDisplay.style.height = "100%";
+    containerImage.style.transform = "translateY(-50%)";
+}
 
 // Instagram
 
