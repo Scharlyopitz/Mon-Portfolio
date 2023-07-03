@@ -29,7 +29,7 @@ liens.forEach((lien) => {
 // fonction animation changement de page
 
 function pageTransition() {
-    containerImage.style.zIndex = "500";
+    containerImage.style.zIndex = "400";
     containerImage.style.top = "50%";
     containerImage.style.right = "50%";
     containerImage.style.transform = "translate(50%,-50%)";
