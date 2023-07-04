@@ -21,15 +21,25 @@ liens.forEach((lien) => {
         liens.forEach((buttons) => {
             buttons.classList.remove("active");
             pageTransition();
+
+            // suppression des modifications lié à la transition de page
+            setTimeout(() => {
+                stopPageTransition();
+            }, 4000);
         });
 
         // ajout d'une class pour modifier l'apparence de l'image au changement de page
         imageDisplay.classList.add("no-animation");
 
+        // suppresion de la class no-animation
+        setTimeout(() => {
+            imageDisplay.classList.remove("no-animation");
+        }, 4000);
+
         lien.classList.add("active");
 
         // Si la class des liens contien la class "active" alors l'image reste la même quand la souris quitte le lien
-        if (lien.className === `${pays} active`) {
+        if (lien.classList.value === `${pays} active`) {
             lien.addEventListener("mouseleave", function () {
                 imageDisplay.style.backgroundImage = `url(images/${pays}.jpg)`;
             });
@@ -47,6 +57,18 @@ function pageTransition() {
     imageDisplay.style.width = "100vw";
     imageDisplay.style.height = "100vh";
     imageDisplay.style.borderRadius = "0";
+}
+
+// fonction annulation de l'animation changement de page
+
+function stopPageTransition() {
+    containerImage.style.zIndex = "";
+    containerImage.style.top = "";
+    containerImage.style.right = "";
+    containerImage.style.transform = "";
+    imageDisplay.style.width = "";
+    imageDisplay.style.height = "";
+    imageDisplay.style.borderRadius = "";
 }
 
 // Instagram

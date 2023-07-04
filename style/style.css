@@ -477,4 +477,36 @@ header .liens {
 
 .not-hide {
   visibility: visible !important;
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  pointer-events: none;
+}
+
+.transition div {
+  height: 100%;
+  width: 25%;
+  transition: transform 0.5s;
+}
+
+.transition div:nth-child(1) {
+  background-color: aqua;
+}
+
+.transition div:nth-child(2) {
+  background-color: red;
+}
+
+.transition div:nth-child(3) {
+  background-color: blue;
+}
+
+.transition div:nth-child(4) {
+  background-color: purple;
 }/*# sourceMappingURL=style.css.map */
