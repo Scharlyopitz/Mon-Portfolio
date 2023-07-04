@@ -10,16 +10,16 @@ liens.forEach((lien) => {
     lien.addEventListener("mouseover", function () {
         imageDisplay.style.backgroundImage = `url(images/${pays}.jpg)`;
     });
+
     lien.addEventListener("mouseleave", function () {
         imageDisplay.style.backgroundImage = "";
     });
 
-    // Evènement au click pour la couleur des boutons
+    // Evènement au click pour le bouton actif
 
     lien.addEventListener("click", () => {
         liens.forEach((buttons) => {
             buttons.classList.remove("active");
-            imageDisplay.style.backgroundImage = `url(images/${pays}.jpg) `;
             pageTransition();
         });
 
@@ -27,6 +27,13 @@ liens.forEach((lien) => {
         imageDisplay.classList.add("no-animation");
 
         lien.classList.add("active");
+
+        // Si la class des liens contien la class "active" alors l'image reste la même quand la souris quitte le lien
+        if (lien.className === `${pays} active`) {
+            lien.addEventListener("mouseleave", function () {
+                imageDisplay.style.backgroundImage = `url(images/${pays}.jpg)`;
+            });
+        }
     });
 });
 
