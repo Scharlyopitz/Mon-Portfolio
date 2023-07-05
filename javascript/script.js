@@ -70,6 +70,12 @@ setTimeout(() => containerImage.classList.add("not-hide"), 5000);
 
 // Cacher le texte du loader pour l'animation
 
+const body = document.querySelector("body");
+
+setTimeout(() => {
+    body.style.overflow = "visible";
+}, 6000);
+
 const textLoader = document.querySelector(".texte-loader");
 
 setTimeout(() => textLoader.classList.add("opacity0"), 2000);
