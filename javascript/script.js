@@ -68,13 +68,13 @@ setTimeout(() => containerImage.classList.add("not-hide"), 5000);
 
 // **************** LOADER ****************
 
-// Cacher le texte du loader pour l'animation
-
 const body = document.querySelector("body");
 
 setTimeout(() => {
     body.style.overflow = "visible";
 }, 6000);
+
+// Cacher le texte du loader pour l'animation
 
 const textLoader = document.querySelector(".texte-loader");
 
