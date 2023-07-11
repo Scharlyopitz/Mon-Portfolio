@@ -1,9 +1,6 @@
 /* Configuration pour l'affichage des images */
 
 .container-image {
-    position: absolute;
-    top: 25%;
-    right: 15%;
     animation: imageDisplay 2s ease-in-out;
     animation-delay: 5.2s;
     visibility: hidden;

@@ -28,7 +28,7 @@ liens.forEach((lien) => {
 
 // Instagram
 
-const instagram = document.querySelector("#contact .instagram");
+const instagram = document.querySelector(".contact .instagram");
 
 instagram.addEventListener("mouseover", function () {
     imageDisplay.style.backgroundImage = `url(https://www.numerama.com/wp-content/uploads/2021/08/logo-instagram.jpg)`;
@@ -40,7 +40,7 @@ instagram.addEventListener("mouseleave", function () {
 
 // GitHub
 
-const gitHub = document.querySelector("#contact .github");
+const gitHub = document.querySelector(".contact .github");
 
 gitHub.addEventListener("mouseover", function () {
     imageDisplay.style.backgroundImage = `url(https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg)`;
@@ -54,7 +54,7 @@ gitHub.addEventListener("mouseleave", function () {
 
 // Affichage réseaux sociaux
 
-const socialMedias = document.querySelectorAll("#contact i");
+const socialMedias = document.querySelectorAll(".contact i");
 
 socialMedias.forEach((icon) => {
     setTimeout(() => icon.classList.add("not-hide"), 6000);
@@ -136,3 +136,19 @@ a.forEach((e) => {
         });
     });
 });
+
+// **************** PROGRESS BAR ****************
+
+function scrollSpy() {
+    let scrollTop = document.documentElement.scrollTop;
+
+    let documentHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    let percent = (scrollTop / documentHeight) * 100;
+
+    document.querySelector(".percent").style.width = `${percent}%`;
+}
+
+document.addEventListener("scroll", scrollSpy);

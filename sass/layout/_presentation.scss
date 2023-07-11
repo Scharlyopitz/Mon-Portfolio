@@ -1,11 +1,10 @@
 /* Mise en page de ma présentation */
 
 #presentation {
-    font-size: 30px;
-    height: 90%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: var(--height-section);
 
     & h1 {
         animation: fallingTitle 1s forwards;
@@ -54,5 +53,14 @@
         font-size: 30px;
         overflow: hidden;
         margin-top: 30px;
+    }
+
+    & .presentation-split {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .width-50 {
+        width: 50%;
     }
 }
