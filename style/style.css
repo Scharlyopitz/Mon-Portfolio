@@ -8,6 +8,10 @@
 }
 
 /* Configuration base */
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -373,7 +377,7 @@ header .liens {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--height-section);
+  height: 90vh;
 }
 #presentation h1 {
   animation: fallingTitle 1s forwards;
@@ -482,17 +486,31 @@ header .liens {
 
 #competences {
   height: var(--height-section);
-  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+#competences-ancre {
+  transform: translateY(-20px);
 }
 
 #contact {
   height: var(--height-section);
+  display: flex;
+  justify-content: center;
+}
+#contact-ancre {
+  transform: translateY(-20px);
 }
 
 #projets {
   height: var(--height-section);
+  display: flex;
+  justify-content: center;
+}
+#projets-ancre {
+  transform: translateY(-20px);
 }
 
 :root {
-  --height-section: 90vh;
+  --height-section: 100vh;
 }/*# sourceMappingURL=style.css.map */

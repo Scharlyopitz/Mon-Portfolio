@@ -1,4 +1,9 @@
 #competences {
     height: var(--height-section);
-    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    &-ancre {
+        transform: translateY(-20px);
+    }
 }

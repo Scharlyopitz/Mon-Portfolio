@@ -1,3 +1,9 @@
 #contact {
     height: var(--height-section);
+    display: flex;
+    justify-content: center;
+
+    &-ancre {
+        transform: translateY(-20px);
+    }
 }
