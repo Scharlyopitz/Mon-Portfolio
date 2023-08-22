@@ -21,3 +21,11 @@ gitHub.addEventListener("mouseover", function () {
 gitHub.addEventListener("mouseleave", function () {
     imageDisplay.style.backgroundImage = "";
 });
+
+// Affichage permanent réseaux sociaux
+
+const socialMedias = document.querySelectorAll(".icon-contact i");
+
+socialMedias.forEach((icon) => {
+    setTimeout(() => icon.classList.add("not-hide"), 6000);
+});

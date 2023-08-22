@@ -16,25 +16,13 @@ liens.forEach((lien) => {
     });
 });
 
-// ********** Affichage permanant après animation **********
-
-// Affichage réseaux sociaux
-
-const socialMedias = document.querySelectorAll(".icon-contact i");
-
-socialMedias.forEach((icon) => {
-    setTimeout(() => icon.classList.add("not-hide"), 6000);
-});
-
-// Affichage container-image
+// Affichage permanent container-image
 
 const containerImage = document.querySelector(".container-image");
 
 setTimeout(() => containerImage.classList.add("not-hide"), 5000);
 
 // ************************* Scroll en haut de page au reload *************************
-
-// const html = document.querySelector("html");
 
 window.addEventListener("load", function () {
     this.window.location.href = "#";
