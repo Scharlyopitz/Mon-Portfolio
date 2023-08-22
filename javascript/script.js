@@ -14,21 +14,11 @@ liens.forEach((lien) => {
     lien.addEventListener("mouseleave", function () {
         imageDisplay.style.backgroundImage = "";
     });
-
-    // Evènement au click pour le bouton actif
-
-    lien.addEventListener("click", () => {
-        liens.forEach((buttons) => {
-            buttons.classList.remove("active");
-        });
-
-        lien.classList.add("active");
-    });
 });
 
 // Instagram
 
-const instagram = document.querySelector(".contact .instagram");
+const instagram = document.querySelector(".icon-contact .instagram");
 
 instagram.addEventListener("mouseover", function () {
     imageDisplay.style.backgroundImage = `url(https://www.numerama.com/wp-content/uploads/2021/08/logo-instagram.jpg)`;
@@ -40,7 +30,7 @@ instagram.addEventListener("mouseleave", function () {
 
 // GitHub
 
-const gitHub = document.querySelector(".contact .github");
+const gitHub = document.querySelector(".icon-contact .github");
 
 gitHub.addEventListener("mouseover", function () {
     imageDisplay.style.backgroundImage = `url(https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg)`;
@@ -54,7 +44,7 @@ gitHub.addEventListener("mouseleave", function () {
 
 // Affichage réseaux sociaux
 
-const socialMedias = document.querySelectorAll(".contact i");
+const socialMedias = document.querySelectorAll(".icon-contact i");
 
 socialMedias.forEach((icon) => {
     setTimeout(() => icon.classList.add("not-hide"), 6000);
@@ -65,3 +55,12 @@ socialMedias.forEach((icon) => {
 const containerImage = document.querySelector(".container-image");
 
 setTimeout(() => containerImage.classList.add("not-hide"), 5000);
+
+// ************************* Scroll en haut de page au reload *************************
+
+// const html = document.querySelector("html");
+
+window.addEventListener("load", function () {
+    this.window.location.href = "#";
+    this.document.documentElement.scrollTop = "0";
+});

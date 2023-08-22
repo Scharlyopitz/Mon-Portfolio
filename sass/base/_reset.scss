@@ -18,9 +18,9 @@ body {
     width: 100%;
     height: 100%;
     padding: 0 130px;
-    background-color: #4f1414;
+    background-color: black;
     color: white;
-    font-family: "Aboreto", cursive;
+    font-family: "Poppins";
     transition: 0.2s;
     transition-delay: 0.2s;
     overflow: hidden;
@@ -40,13 +40,4 @@ a {
     color: white;
     text-decoration: none;
     cursor: none;
-}
-
-h1,
-h2 {
-    font-family: "Aboreto", cursive;
-}
-
-p {
-    font-family: "Shadows Into Light", cursive;
 }

@@ -34,11 +34,6 @@ header {
         animation-delay: 4.8s;
     }
 
-    .active {
-        background-color: white;
-        color: #4f1414;
-    }
-
     & a::after {
         content: "";
         display: block;
@@ -55,11 +50,12 @@ header {
         width: 100%;
     }
     & a:hover {
-        color: #4f1414;
+        color: black;
     }
     & .portfolio-logo {
         font-family: "Shadows Into Light", cursive;
         font-size: 80px;
+        mix-blend-mode: difference;
     }
     & .liens {
         display: flex;
