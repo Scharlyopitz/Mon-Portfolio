@@ -1,0 +1,41 @@
+#Home-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+    & i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+    }
+}
+
+.circulare-text {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: textRotation 10s linear infinite;
+
+    & span {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        transform-origin: 0 60px;
+        font-size: 12px;
+    }
+}
+
+@keyframes textRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
