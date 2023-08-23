@@ -5,6 +5,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: var(--padding-section);
 
     & a {
         position: relative;

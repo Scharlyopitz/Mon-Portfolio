@@ -2,6 +2,9 @@
     position: fixed;
     bottom: 40px;
     right: 40px;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
 
     & i {
         position: absolute;
@@ -9,7 +12,18 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 30px;
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
     }
+}
+
+.active {
+    opacity: 1 !important;
+    pointer-events: all !important;
 }
 
 .circulare-text {
@@ -28,6 +42,7 @@
         top: 0;
         transform-origin: 0 60px;
         font-size: 12px;
+        font-weight: 600;
     }
 }
 

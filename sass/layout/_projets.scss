@@ -2,8 +2,10 @@
     height: var(--height-section);
     display: flex;
     justify-content: center;
+    background-color: white;
+    color: black;
 
     &-ancre {
-        transform: translateY(-20px);
+        transform: translateY(5px);
     }
 }

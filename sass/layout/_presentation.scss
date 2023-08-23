@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
+    padding: var(--padding-section);
 
     & h1 {
         animation: fallingTitle 1s forwards;
