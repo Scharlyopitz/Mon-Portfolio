@@ -5,6 +5,7 @@
     opacity: 0;
     pointer-events: none;
     mix-blend-mode: difference;
+    transition: 0.5s;
 
     & i {
         position: absolute;
