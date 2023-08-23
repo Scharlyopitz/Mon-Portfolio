@@ -50,3 +50,18 @@ a.forEach((e) => {
         });
     });
 });
+
+const miniSocialMedias = document.querySelectorAll(".contact-mini a");
+
+miniSocialMedias.forEach((e) => {
+    e.addEventListener("mouseover", () => {
+        circles.forEach((circle) => {
+            circle.style.transform = "scale(3)";
+        });
+    });
+    e.addEventListener("mouseleave", () => {
+        circles.forEach((circle) => {
+            circle.style.transform = "";
+        });
+    });
+});
