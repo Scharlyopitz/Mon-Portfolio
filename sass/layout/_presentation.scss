@@ -1,4 +1,14 @@
+@import "../utils/mixins";
+
 /* Mise en page de ma présentation */
+
+main section h2 {
+    @include sectionDesign;
+}
+
+.text-section {
+    @include sectionCenterText;
+}
 
 #presentation {
     display: flex;
