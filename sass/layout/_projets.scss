@@ -1,7 +1,53 @@
 #projets {
-    height: var(--height-section);
     display: flex;
-    justify-content: center;
-    background-color: white;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(235deg, #c9c9c9, #ffffff);
     color: black;
+    min-height: 110vh;
+    position: relative;
+
+    & .projets-image {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+        justify-content: center;
+        padding: 70px 0;
+
+        & :nth-child(1) {
+            background-image: url("/images/sophie-bluel.png");
+            background-size: cover;
+            background-position: center;
+        }
+        & :nth-child(2) {
+            background-image: url("/images/Ohmyfood.png");
+            background-size: cover;
+            background-position: center;
+        }
+        & :nth-child(3) {
+            background-image: url("/images/Booki.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        & .projet {
+            height: 220px;
+            min-width: 540px;
+            border-radius: 14px;
+            z-index: 451;
+            overflow: hidden;
+
+            &-description {
+                width: 100%;
+                height: 0;
+                background: black;
+                opacity: 0.6;
+            }
+        }
+    }
 }
+
+// .projet:hover .projet-description {
+//     height: 100%;
+// }

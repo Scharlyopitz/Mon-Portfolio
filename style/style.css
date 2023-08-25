@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 body {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background: linear-gradient(235deg, #101010, #343434);
   color: white;
   font-family: "Urbanist";
   transition: 0.2s;
@@ -78,6 +78,7 @@ a {
   top: 0;
   left: 0;
   mix-blend-mode: difference;
+  z-index: 450;
 }
 
 .percent {
@@ -94,6 +95,7 @@ a {
   pointer-events: none;
   mix-blend-mode: difference;
   transition: 0.5s;
+  z-index: 500;
 }
 #Home-btn i {
   position: absolute;
@@ -152,6 +154,7 @@ a {
   align-items: center;
   pointer-events: none;
   transition: 0.5s;
+  z-index: 500;
 }
 .contact-mini i {
   font-size: 40px;
@@ -507,11 +510,49 @@ main section h2 {
 }
 
 #projets {
-  height: var(--height-section);
   display: flex;
-  justify-content: center;
-  background-color: white;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(235deg, #c9c9c9, #ffffff);
   color: black;
+  min-height: 110vh;
+  position: relative;
+}
+#projets .projets-image {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  justify-content: center;
+  padding: 70px 0;
+}
+#projets .projets-image :nth-child(1) {
+  background-image: url("/images/sophie-bluel.png");
+  background-size: cover;
+  background-position: center;
+}
+#projets .projets-image :nth-child(2) {
+  background-image: url("/images/Ohmyfood.png");
+  background-size: cover;
+  background-position: center;
+}
+#projets .projets-image :nth-child(3) {
+  background-image: url("/images/Booki.png");
+  background-size: cover;
+  background-position: center;
+}
+#projets .projets-image .projet {
+  height: 220px;
+  min-width: 540px;
+  border-radius: 14px;
+  z-index: 451;
+  overflow: hidden;
+}
+#projets .projets-image .projet-description {
+  width: 100%;
+  height: 0;
+  background: black;
+  opacity: 0.6;
 }
 
 :root {
