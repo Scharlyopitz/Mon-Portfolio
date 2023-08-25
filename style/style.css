@@ -542,6 +542,7 @@ main section h2 {
   background-position: center;
 }
 #projets .projets-image .projet {
+  position: relative;
   height: 220px;
   min-width: 540px;
   border-radius: 14px;
@@ -549,10 +550,28 @@ main section h2 {
   overflow: hidden;
 }
 #projets .projets-image .projet-description {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 0;
   background: black;
   opacity: 0.6;
+  transition: 0.5s;
+  transform-origin: top;
+}
+#projets .projets-image .projet-description-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  background: transparent;
+}
+
+.projet:hover .projet-description {
+  height: 100% !important;
 }
 
 :root {
