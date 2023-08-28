@@ -36,7 +36,6 @@
             height: 220px;
             min-width: 540px;
             border-radius: 14px;
-            z-index: 451;
             overflow: hidden;
 
             &-description {
@@ -45,19 +44,60 @@
                 bottom: 0;
                 width: 100%;
                 height: 0;
-                background: black;
-                opacity: 0.6;
+                background: color(srgb 0 0 0 / 0.8);
                 transition: 0.5s;
                 transform-origin: top;
+                text-align: center;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 &-text {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
                     color: white;
                     font-size: 50px;
                     background: transparent;
+                    margin-top: 20px;
+                    pointer-events: none;
+
+                    &2 {
+                        color: white;
+                        background: transparent;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            & .button-site {
+                background: transparent;
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 30px;
+
+                &-voir-code i {
+                    font-size: 20px !important;
+                }
+
+                & a {
+                    background: transparent;
+                    border: 3px solid white;
+                    font-family: "Urbanist";
+                    text-transform: uppercase;
+                    color: white;
+                    font-weight: 300;
+                    padding: 5px 20px;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    & i {
+                        background: transparent;
+                        background: transparent;
+                        font-size: 15px;
+                        margin-left: 10px;
+                    }
                 }
             }
         }
