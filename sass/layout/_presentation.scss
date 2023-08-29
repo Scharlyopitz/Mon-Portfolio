@@ -14,7 +14,7 @@ main section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 90vh;
     padding: var(--padding-section);
 
     & h1 {

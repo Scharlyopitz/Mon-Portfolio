@@ -9,34 +9,96 @@
 
     & .projets-image {
         width: 70%;
+        height: 360px;
+        margin: 70px 0;
         display: flex;
-        flex-wrap: wrap;
-        grid-gap: 20px;
-        justify-content: center;
-        padding: 70px 0;
+        overflow: hidden;
+        box-shadow: 0px 0px 30px #676666;
+        border-radius: 14px;
 
-        & :nth-child(1) {
+        & .P1 {
             background-image: url("/images/sophie-bluel.png");
             background-size: cover;
             background-position: center;
         }
-        & :nth-child(2) {
+        & .P2 {
             background-image: url("/images/Ohmyfood.png");
             background-size: cover;
             background-position: center;
         }
-        & :nth-child(3) {
+        & .P3 {
             background-image: url("/images/Booki.png");
             background-size: cover;
             background-position: center;
         }
+        & .P4 {
+            background-image: url("/images/Projet\ 9.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        & .container-text-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            & .counter {
+                margin: 0 40px;
+                display: flex;
+                letter-spacing: 5px;
+                height: 23px;
+                overflow: hidden;
+
+                &-slide {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transition: 0.5s;
+                }
+            }
+
+            & i {
+                background: transparent;
+            }
+        }
 
         & .projet {
             position: relative;
-            height: 220px;
-            min-width: 540px;
+            height: 100%;
+            width: 100%;
             border-radius: 14px;
             overflow: hidden;
+            flex-shrink: 0;
+            transition: 0.5s;
+
+            &:hover {
+                .projet-description {
+                    height: 100% !important;
+                }
+
+                .projet-description-text {
+                    opacity: 1 !important;
+                }
+                .projet-description-text2 {
+                    opacity: 1 !important;
+                }
+
+                .button-site {
+                    opacity: 1 !important;
+                    pointer-events: all;
+                }
+            }
 
             &-description {
                 overflow: hidden;
@@ -46,6 +108,7 @@
                 height: 0;
                 background: color(srgb 0 0 0 / 0.8);
                 transition: 0.5s;
+                transition-delay: 0.3s;
                 transform-origin: top;
                 text-align: center;
                 padding: 0 20px;
@@ -57,8 +120,11 @@
                     color: white;
                     font-size: 50px;
                     background: transparent;
-                    margin-top: 20px;
+                    margin-top: 40px;
                     pointer-events: none;
+                    opacity: 0;
+                    transition: 0.3s;
+                    transition-delay: 0.7s;
 
                     &2 {
                         color: white;
@@ -66,6 +132,9 @@
                         font-weight: 300;
                         text-transform: uppercase;
                         pointer-events: none;
+                        opacity: 0;
+                        transition: 0.3s;
+                        transition-delay: 0.8s;
                     }
                 }
             }
@@ -74,7 +143,11 @@
                 background: transparent;
                 display: flex;
                 justify-content: space-evenly;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
+                opacity: 0;
+                transition: 0.3s;
+                transition-delay: 0.9s;
+                pointer-events: none;
 
                 &-voir-code i {
                     font-size: 20px !important;
@@ -91,19 +164,46 @@
                     font-size: 20px;
                     display: flex;
                     align-items: center;
+                    position: relative;
+                    transition: all 0.5s ease 0s;
+                    z-index: 1;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        background-color: white;
+                        z-index: -2;
+                        transition: all 0.5s ease 0s;
+
+                        transform: scaleX(0);
+                    }
+
+                    &:hover {
+                        color: black;
+
+                        &::after {
+                            transform: scaleX(1) !important;
+                        }
+
+                        & i {
+                            color: black !important;
+                        }
+                    }
 
                     & i {
                         background: transparent;
                         background: transparent;
                         font-size: 15px;
                         margin-left: 10px;
+                        transition: all 0.5s ease 0s;
                     }
                 }
             }
         }
     }
-}
-
-.projet:hover .projet-description {
-    height: 100% !important;
 }

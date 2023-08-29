@@ -51,6 +51,36 @@ a.forEach((e) => {
     });
 });
 
+const lienHeader = document.querySelectorAll("header a");
+
+lienHeader.forEach((e) => {
+    e.addEventListener("mouseover", () => {
+        circles.forEach((circle) => {
+            circle.style.transform = "scale(0)";
+        });
+    });
+    e.addEventListener("mouseleave", () => {
+        circles.forEach((circle) => {
+            circle.style.transform = "";
+        });
+    });
+});
+
+const bouttonsProjets = document.querySelectorAll(".button-site a");
+
+bouttonsProjets.forEach((e) => {
+    e.addEventListener("mouseover", () => {
+        circles.forEach((circle) => {
+            circle.style.transform = "scale(0)";
+        });
+    });
+    e.addEventListener("mouseleave", () => {
+        circles.forEach((circle) => {
+            circle.style.transform = "";
+        });
+    });
+});
+
 const miniSocialMedias = document.querySelectorAll(".contact-mini a");
 
 miniSocialMedias.forEach((e) => {
