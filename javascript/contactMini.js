@@ -14,7 +14,7 @@ export default function contactMini() {
     window.addEventListener("scroll", () => {
         const { scrollTop } = document.documentElement;
 
-        if (scrollTop > 900) {
+        if (scrollTop > 980) {
             bigLine.classList.add("active-big-line");
             littleLine.classList.add("active-little-line");
             miniGithub.classList.add("active-github");

@@ -7,6 +7,7 @@ import progressBar from "./javascript/progressBar";
 import projets from "./javascript/projets";
 import script from "./javascript/script";
 import socialMedia from "./javascript/socialMedia";
+import apropos from "./javascript/apropos";
 
 competences();
 loader();
@@ -17,3 +18,4 @@ progressBar();
 projets();
 script();
 socialMedia();
+apropos();

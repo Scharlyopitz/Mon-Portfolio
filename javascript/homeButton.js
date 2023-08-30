@@ -18,7 +18,7 @@ export default function homeButton() {
     window.addEventListener("scroll", () => {
         const { scrollTop } = document.documentElement;
 
-        if (scrollTop > 900) {
+        if (scrollTop > 980) {
             homeButon.classList.add("active");
         } else {
             homeButon.classList.remove("active");

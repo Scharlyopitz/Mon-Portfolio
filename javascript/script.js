@@ -23,7 +23,7 @@ export default function script() {
 
     setTimeout(() => containerImage.classList.add("not-hide"), 5000);
 
-    // ************************* Scroll en haut de page au reload *************************
+    // ************************* Animation au reload *************************
 
     window.addEventListener("load", function () {
         this.window.location.href = "#";
