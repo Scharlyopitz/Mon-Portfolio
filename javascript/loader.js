@@ -11,7 +11,9 @@ export default function loader() {
 
     setTimeout(() => textLoader.classList.add("opacity0"), 2000);
 
-    setTimeout(() => textLoader.classList.add("opacity1 mix-blend-mode"), 3700);
+    setTimeout(() => textLoader.classList.add("opacity1"), 3700);
+
+    setTimeout(() => textLoader.classList.add("mix-blend-mode"), 3700);
 
     const textHeader = document.querySelector(".portfolio-logo");
 

@@ -1,21 +1,21 @@
 export default function script() {
-    // *********** Changement d'image au survol de la souris ***********
+    // // *********** Changement d'image au survol de la souris ***********
 
-    const imageDisplay = document.querySelector(".image-display");
+    // const imageDisplay = document.querySelector(".image-display");
 
-    const liens = document.querySelectorAll("header a");
+    // const liens = document.querySelectorAll("header a");
 
-    liens.forEach((lien) => {
-        const pays = lien.className;
+    // liens.forEach((lien) => {
+    //     const pays = lien.className;
 
-        lien.addEventListener("mouseover", function () {
-            imageDisplay.style.backgroundImage = `url(images/${pays}.jpg)`;
-        });
+    //     lien.addEventListener("mouseover", function () {
+    //         imageDisplay.style.backgroundImage = `url(images/${pays}.jpg)`;
+    //     });
 
-        lien.addEventListener("mouseleave", function () {
-            imageDisplay.style.backgroundImage = "";
-        });
-    });
+    //     lien.addEventListener("mouseleave", function () {
+    //         imageDisplay.style.backgroundImage = "";
+    //     });
+    // });
 
     // Affichage permanent container-image
 
