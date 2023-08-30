@@ -1,60 +1,64 @@
-const arrowRight = document.querySelector("#arrowRight");
+export default function projets() {
+    const arrowRight = document.querySelector("#arrowRight");
 
-const arrowLeft = document.querySelector("#arrowLeft");
+    const arrowLeft = document.querySelector("#arrowLeft");
 
-const projets = document.querySelectorAll(".projet");
+    const projets = document.querySelectorAll(".projet");
 
-const projetDescriptionTitre = document.querySelector(
-    ".projet-description-text"
-);
+    const projetDescriptionTitre = document.querySelector(
+        ".projet-description-text"
+    );
 
-const projetDescription = document.querySelector(".projet-description-text2");
+    const projetDescription = document.querySelector(
+        ".projet-description-text2"
+    );
 
-const counterSlide = document.querySelector(".counter-slide");
+    const counterSlide = document.querySelector(".counter-slide");
 
-const translate = [
-    {
-        transformSlide: "0",
-        counterSlide: "0",
-    },
-    {
-        transformSlide: "-100%",
-        counterSlide: "-24px",
-    },
-    {
-        transformSlide: "-200%",
-        counterSlide: "-48px",
-    },
-    {
-        transformSlide: "-300%",
-        counterSlide: "-72px",
-    },
-];
+    const translate = [
+        {
+            transformSlide: "0",
+            counterSlide: "0",
+        },
+        {
+            transformSlide: "-100%",
+            counterSlide: "-24px",
+        },
+        {
+            transformSlide: "-200%",
+            counterSlide: "-48px",
+        },
+        {
+            transformSlide: "-300%",
+            counterSlide: "-72px",
+        },
+    ];
 
-let currentPourcent = 0;
+    let currentPourcent = 0;
 
-arrowRight.addEventListener("click", function () {
-    currentPourcent++;
-    if (currentPourcent == translate.length) {
-        currentPourcent = 0;
-    }
+    arrowRight.addEventListener("click", function () {
+        currentPourcent++;
+        if (currentPourcent == translate.length) {
+            currentPourcent = 0;
+        }
 
-    counterSlide.style.transform = `translateY(${translate[currentPourcent].counterSlide})`;
+        counterSlide.style.transform = `translateY(${translate[currentPourcent].counterSlide})`;
 
-    projets.forEach((projet) => {
-        projet.style.transform = `translateX(${translate[currentPourcent].transformSlide})`;
+        projets.forEach((projet) => {
+            projet.style.transform = `translateX(${translate[currentPourcent].transformSlide})`;
+        });
     });
-});
 
-arrowLeft.addEventListener("click", function () {
-    currentPourcent--;
-    if (currentPourcent < 0) {
-        currentPourcent = 3;
-    }
+    arrowLeft.addEventListener("click", function () {
+        currentPourcent--;
+        if (currentPourcent < 0) {
+            currentPourcent = 3;
+        }
 
-    counterSlide.style.transform = `translateY(${translate[currentPourcent].counterSlide})`;
+        counterSlide.style.transform = `translateY(${translate[currentPourcent].counterSlide})`;
 
-    projets.forEach((projet) => {
-        projet.style.transform = `translateX(${translate[currentPourcent].transformSlide})`;
+        projets.forEach((projet) => {
+            projet.style.transform = `translateX(${translate[currentPourcent].transformSlide})`;
+        });
     });
-});
+}
