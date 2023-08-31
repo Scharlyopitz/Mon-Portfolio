@@ -2,17 +2,15 @@
 
 header {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-top: 40px;
+
     padding: var(--padding-section);
 
     & a {
+        padding: 0 20px;
         position: relative;
         transition: 0.3s;
-        width: 43%;
         font-size: 17px;
-        font-weight: 600;
         display: flex;
         justify-content: center;
         animation: fallingLinks 0.3s forwards;
@@ -55,15 +53,19 @@ header {
         color: black;
     }
     & .portfolio-logo {
-        font-family: "Shadows Into Light", cursive;
         font-size: 80px;
-        mix-blend-mode: difference;
         pointer-events: none;
+        letter-spacing: -55px;
+        width: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-50%);
     }
     & .liens {
         display: flex;
-        justify-content: space-between;
-        width: 45%;
+        align-items: center;
+        justify-content: space-around;
     }
 
     @keyframes fallingLinks {

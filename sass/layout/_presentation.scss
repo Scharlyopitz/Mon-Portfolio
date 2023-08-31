@@ -11,66 +11,152 @@ main section h2 {
 }
 
 #presentation {
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 90vh;
     padding: var(--padding-section);
 
-    & h1 {
-        animation: fallingTitle 1s forwards;
-        animation-delay: 4.8s;
-    }
-
-    & p {
-        visibility: hidden;
-        animation: fallingTitle 1s forwards;
-        animation-delay: 5.3s;
-    }
-
-    @keyframes fallingTitle {
-        0% {
-            transform: translateY(-80px);
-        }
-        100% {
-            transform: translateY(0px);
-            visibility: visible;
-        }
-    }
-
-    & .title1 {
-        overflow: hidden;
-
-        & h1 {
-            transform: translateY(-80px);
-            font-size: 25px;
-            font-weight: 200;
-        }
-    }
-
-    & .title2 {
-        overflow: hidden;
-
-        & h1 {
-            animation: fallingTitle 0.7s forwards;
-            font-size: 90px;
-            transform: translateY(-105px);
-            animation-delay: 5.3s;
-        }
-    }
-
-    & .title3 {
-        font-size: 30px;
-        overflow: hidden;
-        margin-top: 30px;
-    }
-
-    & .presentation-split {
-        display: flex;
+    & .presentation-nom {
+        position: relative;
+        font-size: 8vw;
+        font-weight: 100;
+        text-transform: uppercase;
         justify-content: center;
+        display: flex;
+        padding-top: 20vh;
+
+        & div {
+            overflow: hidden;
+        }
+
+        & span {
+            transform: translateY(-100%);
+            display: block;
+            animation: revealTextPresentation 0.5s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        & div:nth-child(2) {
+            margin-left: 5vw;
+            position: relative;
+
+            & span {
+                transform: translateY(100%);
+                animation: revealTextPresentation 0.5s ease-in-out forwards;
+                animation-delay: 1s;
+            }
+
+            &::before {
+                content: " Développeur Front-End.";
+                font-size: 1.1vw;
+                letter-spacing: 0;
+                text-transform: initial;
+                position: absolute;
+                right: 0;
+                color: white;
+            }
+        }
     }
 
-    & .width-50 {
-        width: 50%;
+    & .container-scroll-logo {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & .scroll-btn {
+            position: relative;
+            width: 50px;
+            height: 80px;
+            border: 3px solid white;
+            border-radius: 25px;
+
+            &-dot {
+                width: 10px;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 10px;
+                background: white;
+                border-radius: 50%;
+                animation: scrollAnimatedMouse 2s infinite;
+            }
+        }
+
+        & p {
+            text-transform: uppercase;
+            padding-top: 20px;
+        }
     }
+
+    @keyframes scrollAnimatedMouse {
+        100% {
+            top: 55px;
+            opacity: 0;
+        }
+    }
+
+    @keyframes revealTextPresentation {
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    // & h1 {
+    //     animation: fallingTitle 1s forwards;
+    //     animation-delay: 4.8s;
+    // }
+
+    // & p {
+    //     visibility: hidden;
+    //     animation: fallingTitle 1s forwards;
+    //     animation-delay: 5.3s;
+    // }
+
+    // @keyframes fallingTitle {
+    //     0% {
+    //         transform: translateY(-80px);
+    //     }
+    //     100% {
+    //         transform: translateY(0px);
+    //         visibility: visible;
+    //     }
+    // }
+
+    // & .title1 {
+    //     overflow: hidden;
+
+    //     & h1 {
+    //         transform: translateY(-80px);
+    //         font-size: 25px;
+    //         font-weight: 200;
+    //     }
+    // }
+
+    // & .title2 {
+    //     overflow: hidden;
+
+    //     & h1 {
+    //         animation: fallingTitle 0.7s forwards;
+    //         font-size: 90px;
+    //         transform: translateY(-105px);
+    //         animation-delay: 5.3s;
+    //     }
+    // }
+
+    // & .title3 {
+    //     font-size: 30px;
+    //     overflow: hidden;
+    //     margin-top: 30px;
+    // }
+
+    // & .presentation-split {
+    //     display: flex;
+    //     justify-content: center;
+    // }
 }
