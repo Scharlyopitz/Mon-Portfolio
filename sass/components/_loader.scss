@@ -1,167 +1,99 @@
-// /* Configuration du Loader */
+/* Configuration du Loader */
 
-// #loader {
-//     position: absolute;
-//     background-color: white;
-//     z-index: 500;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100vh;
-//     animation: loader 1s forwards;
-//     animation-delay: 3.5s;
-// }
+#loader {
+    position: fixed;
 
-// @keyframes loader {
-//     0% {
-//         height: 100%;
-//     }
-//     100% {
-//         height: 0;
-//         visibility: hidden;
-//     }
-// }
+    z-index: 500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    animation: loader 1s forwards;
+    animation-delay: 3.5s;
+    overflow: hidden;
 
-// .texte-loader {
-//     position: absolute;
-//     color: black;
-//     display: flex;
-//     font-size: 70px;
-//     overflow: hidden;
-//     height: 100px;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     animation: textMooving 1.5s forwards;
-//     animation-delay: 2s;
+    & div {
+        height: 50%;
+        background: linear-gradient(90deg, #c9c9c9, #ffffff);
+    }
 
-//     & p {
-//         font-size: 80px;
-//         transition: 2s;
-//         font-family: "Shadows Into Light", cursive;
-//     }
+    & .part1 {
+        position: relative;
+        animation: AnimatedPart1 1s ease-in-out forwards;
+        animation-delay: 4s;
+    }
 
-//     & p:nth-child(1) {
-//         animation: texte1 0.3s forwards;
-//     }
+    & .part2 {
+        position: relative;
+        animation: AnimatedPart2 1s ease-in-out forwards;
+        animation-delay: 4s;
 
-//     & p:nth-child(2) {
-//         animation: texte2 1s forwards;
-//     }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            transition: 0.5s;
+            transform: scaleX(0);
+            animation: cutEffect 1s ease forwards;
+            animation-delay: 3s;
+        }
 
-//     @keyframes textMooving {
-//         0% {
-//             top: 50%;
-//             left: 50%;
-//         }
-//         100% {
-//             top: 50px;
-//             left: 234px;
-//         }
-//     }
+        & img {
+            opacity: 0;
+            width: 150px;
+            pointer-events: none;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: logoAnimation 3s forwards;
+        }
+    }
+}
 
-//     @keyframes texte1 {
-//         0% {
-//             transform: translateY(70px);
-//         }
-//         100% {
-//             transform: translateY(0px);
-//         }
-//     }
+.display-none {
+    display: none;
+}
 
-//     @keyframes texte2 {
-//         0% {
-//             transform: translateY(80px);
-//             opacity: 0;
-//         }
-//         50% {
-//             transform: translateY(80px);
-//         }
-//         90% {
-//             opacity: 1;
-//         }
-//         100% {
-//             transform: translateY(0px);
-//             opacity: 1;
-//         }
-//     }
-// }
+@keyframes cutEffect {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-// // Animation de ball pour le déplacement du texte
+@keyframes logoAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
 
-// .ball {
-//     opacity: 0;
-//     width: 50px;
-//     height: 50px;
-//     background-color: black;
-//     position: absolute;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-//     border-radius: 50%;
-//     animation: ballMoove 2.3s ease-in-out;
-//     animation-delay: 1.5s;
-// }
+    40% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(720deg);
+        opacity: 1;
+    }
+}
 
-// @keyframes ballMoove {
-//     0% {
-//         width: 0px;
-//         height: 0px;
-//     }
-//     20% {
-//         top: 50%;
-//         left: 50%;
-//         width: 208px;
-//         height: 100px;
-//         border-radius: 3%;
-//         opacity: 1;
-//     }
+@keyframes AnimatedPart1 {
+    100% {
+        transform: translateY(-100vh);
+    }
+}
 
-//     30% {
-//         width: 50px;
-//         height: 50px;
-//         border-radius: 50%;
-//     }
-//     40% {
-//         width: 60px;
-//         height: 60px;
-//         border-radius: 50% 50% 9% 91% / 50% 90% 10% 50%;
-//     }
-//     65% {
-//         width: 50px;
-//         height: 50px;
-//     }
-//     70% {
-//         border-radius: 50%;
-
-//         top: 50px;
-//         left: 234px;
-//     }
-//     90% {
-//         opacity: 1;
-//         width: 208px;
-//         height: 100px;
-//         top: 50px;
-//         left: 234px;
-//     }
-//     100% {
-//         border-radius: 3%;
-//         opacity: 0;
-//         top: 50px;
-//         left: 234px;
-//         width: 208px;
-//         height: 100px;
-//     }
-// }
-
-// .opacity0 {
-//     opacity: 0;
-// }
-
-// .opacity1 {
-//     opacity: 1;
-// }
-
-// .mix-blend-mode {
-//     mix-blend-mode: difference;
-// }
+@keyframes AnimatedPart2 {
+    100% {
+        transform: translateY(100vh);
+    }
+}

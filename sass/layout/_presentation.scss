@@ -33,8 +33,8 @@ main section h2 {
         & span {
             transform: translateY(-100%);
             display: block;
-            animation: revealTextPresentation 0.5s ease-in-out forwards;
-            animation-delay: 1s;
+            animation: revealTextPresentation 1s ease forwards;
+            animation-delay: 5.5s;
         }
 
         & div:nth-child(2) {
@@ -43,23 +43,27 @@ main section h2 {
 
             & span {
                 transform: translateY(100%);
-                animation: revealTextPresentation 0.5s ease-in-out forwards;
-                animation-delay: 1s;
+                animation: revealTextPresentation 1s ease forwards;
+                animation-delay: 5.5s;
             }
 
             &::before {
                 content: " Développeur Front-End.";
+                opacity: 0;
                 font-size: 1.1vw;
                 letter-spacing: 0;
                 text-transform: initial;
                 position: absolute;
                 right: 0;
                 color: white;
+                animation: revealTextPresentationBefore 1s ease forwards;
+                animation-delay: 5.5s;
             }
         }
     }
 
     & .container-scroll-logo {
+        opacity: 0;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -67,6 +71,8 @@ main section h2 {
         bottom: 10vh;
         left: 50%;
         transform: translateX(-50%);
+        animation: revealTextPresentationBefore 1s ease forwards;
+        animation-delay: 5s;
 
         & .scroll-btn {
             position: relative;
@@ -104,6 +110,12 @@ main section h2 {
     @keyframes revealTextPresentation {
         100% {
             transform: translateY(0%);
+        }
+    }
+
+    @keyframes revealTextPresentationBefore {
+        100% {
+            opacity: 1;
         }
     }
 

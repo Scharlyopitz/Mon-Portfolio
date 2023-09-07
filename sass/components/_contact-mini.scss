@@ -1,112 +1,112 @@
-.contact-mini {
-    position: fixed;
-    left: 81px;
-    bottom: 0px;
-    mix-blend-mode: difference;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    transition: 0.5s;
-    z-index: 500;
+// .contact-mini {
+//     position: fixed;
+//     left: 81px;
+//     bottom: 0px;
+//     mix-blend-mode: difference;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     pointer-events: none;
+//     transition: 0.5s;
+//     z-index: 450;
 
-    & i {
-        font-size: 50px;
-        margin: 5px;
-    }
+//     & i {
+//         font-size: 50px;
+//         margin: 5px;
+//     }
 
-    & .big-line {
-        width: 2px;
-        height: 40px;
-        background: white;
-        transform-origin: bottom;
-        opacity: 0;
-        transition: 0.5s;
-    }
+//     & .big-line {
+//         width: 2px;
+//         height: 40px;
+//         background: white;
+//         transform-origin: bottom;
+//         opacity: 0;
+//         transition: 0.5s;
+//     }
 
-    & .little-line {
-        width: 2px;
-        height: 20px;
-        background: white;
-        transform-origin: bottom;
-        opacity: 0;
-        transition: 0.5s;
-    }
+//     & .little-line {
+//         width: 2px;
+//         height: 20px;
+//         background: white;
+//         transform-origin: bottom;
+//         opacity: 0;
+//         transition: 0.5s;
+//     }
 
-    &-github i {
-        opacity: 0;
-        transition: 0.5s;
-    }
+//     &-github i {
+//         opacity: 0;
+//         transition: 0.5s;
+//     }
 
-    &-instagram i {
-        opacity: 0;
-        transition: 0.5s;
-    }
-}
+//     &-instagram i {
+//         opacity: 0;
+//         transition: 0.5s;
+//     }
+// }
 
-.active-little-line {
-    animation: littleLineAnimation 0.6s ease-in-out;
-    opacity: 1 !important;
-}
+// .active-little-line {
+//     animation: littleLineAnimation 0.6s ease-in-out;
+//     opacity: 1 !important;
+// }
 
-@keyframes littleLineAnimation {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+// @keyframes littleLineAnimation {
+//     0% {
+//         transform: scale(0);
+//     }
+//     50% {
+//         transform: scale(0);
+//     }
+//     100% {
+//         transform: scale(1);
+//     }
+// }
 
-.active-github {
-    animation: miniGithubAnimation 0.4s ease-in-out;
-    opacity: 1 !important;
-    pointer-events: all;
-}
+// .active-github {
+//     animation: miniGithubAnimation 0.4s ease-in-out;
+//     opacity: 1 !important;
+//     pointer-events: all;
+// }
 
-@keyframes miniGithubAnimation {
-    0% {
-        transform: scale(0);
-    }
+// @keyframes miniGithubAnimation {
+//     0% {
+//         transform: scale(0);
+//     }
 
-    100% {
-        transform: scale(1);
-    }
-}
+//     100% {
+//         transform: scale(1);
+//     }
+// }
 
-.active-instagram {
-    animation: miniInstagramAnimation 0.6s ease-in-out;
-    opacity: 1 !important;
-    pointer-events: all;
-}
+// .active-instagram {
+//     animation: miniInstagramAnimation 0.6s ease-in-out;
+//     opacity: 1 !important;
+//     pointer-events: all;
+// }
 
-@keyframes miniInstagramAnimation {
-    0% {
-        transform: scale(0);
-    }
-    70% {
-        transform: scale(0);
-    }
+// @keyframes miniInstagramAnimation {
+//     0% {
+//         transform: scale(0);
+//     }
+//     70% {
+//         transform: scale(0);
+//     }
 
-    100% {
-        transform: scale(1);
-    }
-}
+//     100% {
+//         transform: scale(1);
+//     }
+// }
 
-.active-big-line {
-    animation: bigLineAnimation 0.4s ease-in-out;
-    opacity: 1 !important;
-}
+// .active-big-line {
+//     animation: bigLineAnimation 0.4s ease-in-out;
+//     opacity: 1 !important;
+// }
 
-@keyframes bigLineAnimation {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+// @keyframes bigLineAnimation {
+//     0% {
+//         transform: scale(0);
+//     }
+//     100% {
+//         transform: scale(1);
+//     }
+// }

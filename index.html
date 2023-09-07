@@ -13,7 +13,7 @@
             referrerpolicy="no-referrer"
         />
         <!-- AJOUT ICON DU PORTFOLIO!! -->
-        <link rel="icon" href="/images/logo.JPG" type="image/x-icon" />
+        <link rel="icon" href="/images/SO_white.png" type="image/x-icon" />
 
         <title>Développeur web - Scharly OPITZ</title>
     </head>
@@ -63,20 +63,31 @@
         <!-- Loader -->
 
         <div id="loader">
-            <div class="ball"></div>
-            <div class="texte-loader">
-                <p>Port</p>
-                <p>folio</p>
+            <div class="part1"></div>
+            <div class="part2">
+                <img src="/images/SO_white.png" alt="Logo Scharly OPITZ" />
             </div>
         </div>
 
         <header>
             <div class="liens">
-                <a href="#apropos">A PROPOS</a>
-                <a href="#competences">COMPETENCES</a>
-                <span class="portfolio-logo">SO</span>
-                <a href="#projets">PROJETS</a>
-                <a href="#contact">CONTACT</a>
+                <div>
+                    <a href="#apropos">A PROPOS</a>
+                </div>
+                <div>
+                    <a href="#competences">COMPETENCES</a>
+                </div>
+
+                <span class="portfolio-logo"
+                    ><img src="/images/SO_white.png" alt="Logo Scharly OPITZ"
+                /></span>
+
+                <div>
+                    <a href="#projets">PROJETS</a>
+                </div>
+                <div>
+                    <a href="#contact">CONTACT</a>
+                </div>
             </div>
         </header>
 
@@ -102,7 +113,7 @@
 
                 <!-- Icon contact mini -->
 
-                <div class="contact-mini">
+                <!-- <div class="contact-mini">
                     <div class="contact-mini-instagram">
                         <a
                             href="https://www.instagram.com/s.optz/?hl=fr"
@@ -125,7 +136,7 @@
                         ></a>
                     </div>
                     <div class="big-line"></div>
-                </div>
+                </div> -->
 
                 <!-- ------------------------ -->
 
@@ -342,57 +353,39 @@
                     <h2>COMPETENCES</h2>
                     <p>MES COMPÉTENCES À VOTRE SERVICES.</p>
                 </div>
-
-                <div class="container-skills">
-                    <div class="HTML">
-                        <img
-                            src="/images/HTMLtransparent.png"
-                            class="logo-html"
-                            alt="logo html"
-                        />
-                        <p>HTML</p>
+                <div class="competences-container">
+                    <div>
+                        <span class="competences-percent"
+                            >html <span class="value">95%</span></span
+                        >
                     </div>
-                    <div class="CSS">
-                        <img
-                            class="logo-css"
-                            src="/images/CSS.png"
-                            alt="logo css"
-                        />
-                        <p>CSS</p>
+                    <div>
+                        <span class="competences-percent"
+                            >css <span class="value">95%</span></span
+                        >
                     </div>
-                    <div class="JS">
-                        <img
-                            src="/images/JS.png"
-                            class="logo-javascript"
-                            alt="logo js"
-                        />
-                        <p>JAVASCRIPT</p>
+                    <div>
+                        <span class="competences-percent"
+                            >sass <span class="value">95%</span></span
+                        >
                     </div>
-                    <div class="REACT">
-                        <img
-                            src="/images/react.png"
-                            class="logo-react"
-                            alt="logo react"
-                        />
-                        <p>REACT</p>
+                    <div>
+                        <span class="competences-percent"
+                            >REACT <span class="value">80%</span></span
+                        >
                     </div>
-                    <div class="REDUX">
-                        <img
-                            src="/images/redux.svg"
-                            class="logo-redux"
-                            alt="logo redux"
-                        />
-                        <p>REDUX</p>
+                    <div>
+                        <span class="competences-percent"
+                            >Javascript <span class="value">75%</span></span
+                        >
                     </div>
-                    <div class="SASS">
-                        <img
-                            src="/images/SASS.png"
-                            class="logo-sass"
-                            alt="logo sass"
-                        />
-                        <p>SASS</p>
+                    <div>
+                        <span class="competences-percent"
+                            >redux <span class="value">70%</span></span
+                        >
                     </div>
                 </div>
+                <a href="#projets"></a>
             </section>
 
             <section id="projets">
@@ -401,165 +394,209 @@
                     <p>LES PROJETS QUE J'AI REALISÉ.</p>
                 </div>
 
-                <div class="projets-image">
-                    <div class="projet P1">
-                        <div class="projet-description">
-                            <p class="projet-description-text">Sophie Bluel</p>
-                            <p class="projet-description-text2">
-                                Conception du site portfolio d'une architect
-                                d'intérieur.
+                <div class="projet-container">
+                    <div class="projet transformProjet">
+                        <div class="projet-image">
+                            <img
+                                src="/images/sophie-bluel.png"
+                                alt="sophie-bluel"
+                            />
+                        </div>
+                        <div class="projet-container-text">
+                            <p class="projet-container-text-number">1</p>
+                            <p class="projet-container-text-name">
+                                <span> Sophie Bluel </span>
                             </p>
-                            <div class="button-site">
-                                <a
-                                    href="https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
-                                    target="_blank"
-                                    class="button-site-voir-code"
-                                >
-                                    Voir code
-                                    <i
-                                        class="fa-brands fa-github"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
-                                <a
-                                    href="https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
-                                    target="_blank"
-                                    class="button-site-voir-site"
-                                >
-                                    Voir site
-                                    <i
-                                        class="fa-solid fa-arrow-up-right-from-square"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="projet P2">
-                        <div class="projet-description">
-                            <p class="projet-description-text">OhmyFood</p>
-                            <p class="projet-description-text2">
-                                Améliorer l'interface d'un site mobile avec des
-                                animations CSS.
+                    <div class="projet">
+                        <div class="projet-image">
+                            <img src="/images/Ohmyfood.jpg" alt="OhmyFood" />
+                        </div>
+                        <div class="projet-container-text">
+                            <p class="projet-container-text-number">2</p>
+                            <p class="projet-container-text-name">
+                                <span>Ohmyfood</span>
                             </p>
-                            <div class="button-site">
-                                <a
-                                    href="https://github.com/Scharlyopitz/Ohmyfood"
-                                    target="_blank"
-                                    class="button-site-voir-code"
-                                >
-                                    Voir code
-                                    <i
-                                        class="fa-brands fa-github"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
-                                <a
-                                    href="https://scharlyopitz.github.io/Ohmyfood/"
-                                    target="_blank"
-                                    class="button-site-voir-site"
-                                >
-                                    Voir site
-                                    <i
-                                        class="fa-solid fa-arrow-up-right-from-square"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="projet">
+                        <div class="projet-image">
+                            <img src="/images/Booki.jpg" alt="Booki" />
+                        </div>
+                        <div class="projet-container-text">
+                            <p class="projet-container-text-number">3</p>
+                            <p class="projet-container-text-name">
+                                <span>Booki</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projet transformProjet">
+                        <div class="projet-image">
+                            <img
+                                src="/images/Projet9.webp"
+                                alt="Nina Carducci"
+                            />
+                        </div>
+                        <div class="projet-container-text">
+                            <p class="projet-container-text-number">4</p>
+                            <p class="projet-container-text-name">
+                                <span> Nina Carducci </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reaveal-projets-container-projet1 params">
+                    <img src="/images/sophie-bluel.png" alt="sophie-bluel" />
+                    <div class="half-section">
+                        <span class="arrow-back"></span>
+                        <div class="half-section-text-container">
+                            <h3 class="half-section-title">
+                                <div><p>sophie</p></div>
+                                <div><p>Bluel</p></div>
+                            </h3>
+                            <div class="half-section-description">
+                                <div>
+                                    <p>
+                                        Conception du site portfolio d'une
+                                        architect d'intérieur.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="half-section-button-container">
+                                <div class="btn">
+                                    <a
+                                        href="https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
+                                        target="_blank"
+                                        >Voir code
+                                    </a>
+                                </div>
+                                <div class="under-btn"></div>
+                                <div class="btn">
+                                    <a
+                                        href="https://github.com/Scharlyopitz/Projet-6-Creez-une-page-web-dynamique-avec-JavaScript"
+                                        target="_blank"
+                                        >Voir site
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="projet P3">
-                        <div class="projet-description">
-                            <p class="projet-description-text">Booki</p>
-                            <p class="projet-description-text2">
-                                Création de la page d'acceuil d'une agence de
-                                voyage.
-                            </p>
-                            <div class="button-site">
-                                <a
-                                    href="https://github.com/Scharlyopitz/Projet-Booki"
-                                    target="_blank"
-                                    class="button-site-voir-code"
-                                >
-                                    Voir code
-                                    <i
-                                        class="fa-brands fa-github"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
-                                <a
-                                    href="https://scharlyopitz.github.io/Projet-Booki/"
-                                    target="_blank"
-                                    class="button-site-voir-site"
-                                >
-                                    Voir site
-                                    <i
-                                        class="fa-solid fa-arrow-up-right-from-square"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
+                <div class="reaveal-projets-container-projet2 params">
+                    <img src="/images/Ohmyfood.jpg" alt="OhmyFood" />
+                    <div class="half-section">
+                        <span class="arrow-back"></span>
+                        <div class="half-section-text-container">
+                            <h3 class="half-section-title">
+                                <div><p>Ohmy</p></div>
+                                <div><p>food</p></div>
+                            </h3>
+                            <div class="half-section-description">
+                                <div>
+                                    <p>
+                                        Améliorer l'interface d'un site mobile
+                                        avec des animations CSS.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="half-section-button-container">
+                                <div class="btn">
+                                    <a
+                                        href="https://github.com/Scharlyopitz/Ohmyfood"
+                                        target="_blank"
+                                        >Voir code
+                                    </a>
+                                </div>
+                                <div class="under-btn"></div>
+                                <div class="btn">
+                                    <a
+                                        href="https://scharlyopitz.github.io/Ohmyfood/"
+                                        target="_blank"
+                                        >Voir site
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="projet P4">
-                        <div class="projet-description">
-                            <p class="projet-description-text">Nina Carducci</p>
-                            <p class="projet-description-text2">
-                                Optimisez le référencement d'un site de
-                                photographe.
-                            </p>
-                            <div class="button-site">
-                                <a
-                                    href="https://github.com/Scharlyopitz/Projet-SEO-OpenClassrooms"
-                                    target="_blank"
-                                    class="button-site-voir-code"
-                                >
-                                    Voir code
-                                    <i
-                                        class="fa-brands fa-github"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
-                                <a
-                                    href="https://scharlyopitz.github.io/Projet-SEO-OpenClassrooms/"
-                                    target="_blank"
-                                    class="button-site-voir-site"
-                                >
-                                    Voir site
-                                    <i
-                                        class="fa-solid fa-arrow-up-right-from-square"
-                                        style="color: #ffffff"
-                                    ></i>
-                                </a>
+                <div class="reaveal-projets-container-projet3 params">
+                    <img src="/images/Booki.jpg" alt="Booki" />
+                    <div class="half-section">
+                        <span class="arrow-back"></span>
+                        <div class="half-section-text-container">
+                            <h3 class="half-section-title">
+                                <div><p>Booki</p></div>
+                            </h3>
+                            <div class="half-section-description">
+                                <div>
+                                    <p>
+                                        Création de la page d'acceuil d'une
+                                        agence de voyage.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="half-section-button-container">
+                                <div class="btn">
+                                    <a
+                                        href="https://github.com/Scharlyopitz/Projet-Booki"
+                                        target="_blank"
+                                        >Voir code
+                                    </a>
+                                </div>
+                                <div class="under-btn"></div>
+                                <div class="btn">
+                                    <a
+                                        href="https://scharlyopitz.github.io/Projet-Booki/"
+                                        target="_blank"
+                                        >Voir site
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="container-text-slider">
-                        <i
-                            id="arrowLeft"
-                            class="fa-solid fa-chevron-left"
-                            style="color: black"
-                        ></i>
-                        <div class="counter">
-                            <div class="counter-slide">
-                                <p>1</p>
-                                <p>2</p>
-                                <p>3</p>
-                                <p>4</p>
+                <div class="reaveal-projets-container-projet4 params">
+                    <img src="/images/Projet9.webp" alt="Nina Carducci" />
+                    <div class="half-section">
+                        <span class="arrow-back"></span>
+                        <div class="half-section-text-container">
+                            <h3 class="half-section-title">
+                                <div><p>Nina</p></div>
+                                <div><p>Cardu</p></div>
+                                <div><p>cci</p></div>
+                            </h3>
+                            <div class="half-section-description">
+                                <div>
+                                    <p>
+                                        Optimisez le référencement d'un site de
+                                        photographe.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="counter-total">
-                                <p>/4</p>
+                            <div class="half-section-button-container">
+                                <div class="btn">
+                                    <a
+                                        href="https://github.com/Scharlyopitz/Projet-SEO-OpenClassrooms"
+                                        target="_blank"
+                                        >Voir code
+                                    </a>
+                                </div>
+                                <div class="under-btn"></div>
+                                <div class="btn">
+                                    <a
+                                        href="https://scharlyopitz.github.io/Projet-SEO-OpenClassrooms/"
+                                        target="_blank"
+                                        >Voir site
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <i
-                            id="arrowRight"
-                            class="fa-solid fa-chevron-right"
-                            style="color: black"
-                        ></i>
                     </div>
                 </div>
             </section>
