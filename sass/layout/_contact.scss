@@ -1,5 +1,65 @@
 #contact {
     min-height: var(--height-section);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .container-contact-logo {
+        margin-top: 20vh;
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+
+        &-mail {
+            &:hover i {
+                background: linear-gradient(
+                    90deg,
+                    #4889f4 25%,
+                    #eb483b 25%,
+                    #eb483b 50%,
+                    #fabd08 50%,
+                    #fabd08 75%,
+                    #3bab58 75%
+                );
+                -webkit-background-clip: text;
+            }
+        }
+
+        &-insta {
+            &:hover i {
+                background: linear-gradient(
+                    72.44deg,
+                    #ff7a00 11.92%,
+                    #ff0169 51.56%,
+                    #d300c5 85.69%
+                );
+                -webkit-background-clip: text;
+            }
+        }
+
+        &-github {
+            &:hover i {
+                background: #ababab;
+                -webkit-background-clip: text;
+            }
+        }
+
+        & a {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        & i {
+            font-size: 7vw;
+            color: transparent;
+            background: #ffffff;
+            -webkit-background-clip: text;
+            transition: background-color 0.5s ease;
+        }
+
+        & p {
+            font-size: 2em;
+        }
+    }
 }

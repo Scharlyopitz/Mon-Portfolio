@@ -1,6 +1,5 @@
 import competences from "./javascript/competences";
 import loader from "./javascript/loader";
-import contactMini from "./javascript/contactMini";
 import cursor from "./javascript/cursor";
 import homeButton from "./javascript/homeButton";
 import progressBar from "./javascript/progressBar";
@@ -11,7 +10,6 @@ import apropos from "./javascript/apropos";
 
 competences();
 loader();
-contactMini();
 cursor();
 homeButton();
 progressBar();

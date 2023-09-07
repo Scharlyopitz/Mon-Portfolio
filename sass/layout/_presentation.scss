@@ -21,7 +21,6 @@ main section h2 {
         position: relative;
         font-size: 8vw;
         font-weight: 100;
-        text-transform: uppercase;
         justify-content: center;
         display: flex;
         padding-top: 20vh;
@@ -95,7 +94,6 @@ main section h2 {
         }
 
         & p {
-            text-transform: uppercase;
             padding-top: 20px;
         }
     }
