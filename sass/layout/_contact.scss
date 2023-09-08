@@ -10,7 +10,12 @@
         width: 60%;
         justify-content: space-around;
 
+        & div {
+            overflow: hidden;
+        }
+
         &-mail {
+            transform: translateX(-100%);
             &:hover i {
                 background: linear-gradient(
                     90deg,
@@ -26,6 +31,7 @@
         }
 
         &-insta {
+            transform: translateY(100%);
             &:hover i {
                 background: linear-gradient(
                     72.44deg,
@@ -38,9 +44,20 @@
         }
 
         &-github {
+            transform: translateX(100%);
             &:hover i {
                 background: #ababab;
                 -webkit-background-clip: text;
+            }
+        }
+
+        .revealContactLogos {
+            animation: revealContactLogos 1s ease forwards;
+        }
+
+        @keyframes revealContactLogos {
+            100% {
+                transform: translate(0);
             }
         }
 

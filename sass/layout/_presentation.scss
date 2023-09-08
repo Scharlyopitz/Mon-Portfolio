@@ -15,7 +15,21 @@ main section h2 {
 
     & h2,
     p {
-        transform: translateY(50%);
+        transform: translateY(100%);
+    }
+
+    p {
+        animation-delay: 0.3s;
+    }
+}
+
+.reveal-text-section {
+    animation: revealTextSection 1s ease forwards;
+}
+
+@keyframes revealTextSection {
+    100% {
+        transform: translateY(0);
     }
 }
 
