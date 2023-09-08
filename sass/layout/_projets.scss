@@ -226,7 +226,6 @@
         & p {
             transform: translateY(100%);
             transition: 0.5s ease;
-            text-transform: initial;
         }
 
         &-title {
@@ -247,6 +246,7 @@
 
         &-description {
             font-size: 1.2vw;
+            text-transform: initial;
         }
 
         &-button-container {

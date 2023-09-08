@@ -8,6 +8,15 @@ main section h2 {
 
 .text-section {
     @include sectionCenterText;
+
+    & div {
+        overflow: hidden;
+    }
+
+    & h2,
+    p {
+        transform: translateY(50%);
+    }
 }
 
 #presentation {

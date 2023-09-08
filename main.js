@@ -7,6 +7,7 @@ import projets from "./javascript/projets";
 import script from "./javascript/script";
 import socialMedia from "./javascript/socialMedia";
 import apropos from "./javascript/apropos";
+import scrollReveal from "./javascript/scrollReveal";
 
 competences();
 loader();
@@ -17,3 +18,4 @@ projets();
 script();
 socialMedia();
 apropos();
+scrollReveal();
