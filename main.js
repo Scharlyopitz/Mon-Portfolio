@@ -5,6 +5,7 @@ import progressBar from "./javascript/progressBar";
 import projets from "./javascript/projets";
 import script from "./javascript/script";
 import scrollReveal from "./javascript/scrollReveal";
+import headerText from "./javascript/headerText";
 
 loader();
 cursor();
@@ -13,3 +14,4 @@ progressBar();
 projets();
 script();
 scrollReveal();
+headerText();
