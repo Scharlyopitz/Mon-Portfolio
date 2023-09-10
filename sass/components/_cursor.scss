@@ -21,3 +21,11 @@
         z-index: 400;
     }
 }
+
+// MEDIA QUERY
+
+@media (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}

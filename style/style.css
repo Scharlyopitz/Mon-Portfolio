@@ -35,7 +35,7 @@ a {
 /* Configuration du Loader */
 #loader {
   position: fixed;
-  z-index: 500;
+  z-index: 900;
   top: 0;
   left: 0;
   width: 100%;
@@ -143,6 +143,11 @@ a {
   z-index: 400;
 }
 
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
 .progress {
   width: 100%;
   height: 4px;
@@ -269,9 +274,9 @@ header .liens .burger-container {
   pointer-events: none;
   cursor: pointer;
   overflow: visible;
-  width: 150px;
-  height: 2.5vh;
-  z-index: 450;
+  width: 0px;
+  height: 25px;
+  z-index: 501;
 }
 header .liens .burger.active-burger.burger::before {
   animation: animatedBurgerBefore 0.5s ease forwards;
@@ -397,7 +402,7 @@ header .portfolio-logo {
   animation-delay: 5s;
 }
 header .portfolio-logo img {
-  width: 5vw;
+  width: 70px;
 }
 @keyframes revealLinks {
   100% {
@@ -420,12 +425,12 @@ header .portfolio-logo img {
   top: 0;
   left: 0;
   background: #000000;
-  z-index: 449;
+  z-index: 500;
 }
 .burger-menu-container-links {
   width: 100%;
   height: 100%;
-  font-size: 40px;
+  font-size: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -484,19 +489,37 @@ header .portfolio-logo img {
   }
 }
 @media (max-width: 1024px) {
+  header {
+    padding: 40px 0 0 0;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 40px 50px 0;
+  }
   header .liens a {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
   header .portfolio-logo {
     order: -1;
   }
+  header .portfolio-logo img {
+    width: 50px;
+  }
   header .burger-container {
     opacity: 1 !important;
     pointer-events: all !important;
+    width: 150px !important;
   }
   .burger-menu {
     opacity: 1;
     pointer-events: all;
+  }
+}
+@media (max-width: 425px) {
+  header {
+    padding: 20px 20px 0;
   }
 }
 footer {
