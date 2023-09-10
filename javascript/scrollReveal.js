@@ -2,6 +2,7 @@ export default function scrollReveal() {
     // TEXTES SECTIONS
 
     const titleSections = document.querySelectorAll(".text-section h2");
+
     const descriptionSections = document.querySelectorAll(".text-section p");
 
     titleSections.forEach((section, index) => {
@@ -15,7 +16,7 @@ export default function scrollReveal() {
             if (
                 scrollTop >
                 (scrollTop + topELementToTopViewport).toFixed() -
-                    clientHeight * 0.9
+                    clientHeight * 0.95
             ) {
                 titleSections[index].classList.add("reveal-text-section");
                 descriptionSections[index].classList.add("reveal-text-section");
@@ -98,7 +99,7 @@ export default function scrollReveal() {
 
         if (
             scrollTop >
-            (scrollTop + topELementToTopViewport).toFixed() - clientHeight * 0.8
+            (scrollTop + topELementToTopViewport).toFixed() - clientHeight * 0.9
         ) {
             competences.forEach((competence, index) => {
                 competence.classList.add("reveal-competences");
@@ -126,14 +127,14 @@ export default function scrollReveal() {
 
         if (
             scrollTop >
-            (scrollTop + topELementToTopViewport).toFixed() - clientHeight * 0.6
+            (scrollTop + topELementToTopViewport).toFixed() - clientHeight * 0.7
         ) {
             ProjetsContainerTextsShowcase.forEach(
                 (ProjetContainerTextShowcase, index) => {
                     ProjetContainerTextShowcase.classList.add(
                         "reveal-projets-showcase"
                     );
-                    console.log(transitionDelay * index);
+
                     ProjetContainerTextShowcase.style.animationDelay = `${
                         transitionDelay * index
                     }s`;
@@ -158,7 +159,7 @@ export default function scrollReveal() {
 
         if (
             scrollTop >
-            (scrollTop + topELementToTopViewport).toFixed() - clientHeight * 0.7
+            (scrollTop + topELementToTopViewport).toFixed() - clientHeight * 0.8
         ) {
             ContactLogos.forEach((ContactLogo) => {
                 ContactLogo.classList.add("revealContactLogos");

@@ -35,7 +35,7 @@ export default function cursor() {
 
     animateCircles();
 
-    // Effet au survol balise <a>
+    // EFFET AU SURVOL <a>
 
     const a = document.querySelectorAll("a");
 
@@ -67,9 +67,28 @@ export default function cursor() {
         });
     });
 
-    const bouttonsProjets = document.querySelectorAll(".button-site a");
+    const buttonsLeaveProjects = document.querySelectorAll(
+        ".half-section .arrow-back "
+    );
 
-    bouttonsProjets.forEach((e) => {
+    buttonsLeaveProjects.forEach((e) => {
+        e.addEventListener("mouseover", () => {
+            circles.forEach((circle) => {
+                circle.style.transform = "scale(3)";
+            });
+        });
+        e.addEventListener("mouseleave", () => {
+            circles.forEach((circle) => {
+                circle.style.transform = "";
+            });
+        });
+    });
+
+    const buttonsProjects = document.querySelectorAll(
+        ".half-section-button-container .btn "
+    );
+
+    buttonsProjects.forEach((e) => {
         e.addEventListener("mouseover", () => {
             circles.forEach((circle) => {
                 circle.style.transform = "scale(0)";
@@ -82,12 +101,12 @@ export default function cursor() {
         });
     });
 
-    const miniSocialMedias = document.querySelectorAll(".contact-mini a");
+    const contactLogos = document.querySelectorAll("#contact a");
 
-    miniSocialMedias.forEach((e) => {
+    contactLogos.forEach((e) => {
         e.addEventListener("mouseover", () => {
             circles.forEach((circle) => {
-                circle.style.transform = "scale(3)";
+                circle.style.transform = "scale(1)";
             });
         });
         e.addEventListener("mouseleave", () => {

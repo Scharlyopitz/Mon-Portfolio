@@ -68,7 +68,7 @@ export default function projets() {
         });
     });
 
-    // AJOUT DES CLASSES TRANSITION ET SUPPRESSION DE CERTAINES CLASSES AU DEPART DU PROJET
+    // AJOUT DES CLASSES TRANSITION ET SUPPRESSION DE CERTAINES CLASSES QUAND ON QUITTE UN PROJET
 
     leaveProjects.forEach((leaveProjet, index) => {
         leaveProjects[index].addEventListener("click", () => {
@@ -84,6 +84,58 @@ export default function projets() {
                 leaveProjects[index].classList.remove("active-btn");
                 Projects[index].classList.remove("active-transition");
             }, 800);
+        });
+    });
+
+    // CHANGEMENT DU SOUS-TITRE AU SURVOL DE CHAQUES PROJETS
+
+    const skills = [
+        {
+            skill: "Javascript",
+        },
+        {
+            skill: "Css",
+        },
+        {
+            skill: "React",
+        },
+        {
+            skill: "Seo",
+        },
+    ];
+
+    const underTitleProjectsSection2 = document.querySelector(
+        ".undertitle-change span"
+    );
+
+    const underTitleProjectsSection =
+        document.querySelector(".undertitle-change");
+
+    titlesProjectsShowcase.forEach((titleProject, index) => {
+        titlesProjectsShowcase[index].addEventListener("mouseover", () => {
+            underTitleProjectsSection2.innerHTML = ` Projet réalisé en ${skills[index].skill}.`;
+            underTitleProjectsSection.classList.add("change-texts-projects");
+        });
+    });
+
+    titlesProjectsShowcase.forEach((titleProject, index) => {
+        titlesProjectsShowcase[index].addEventListener("mouseleave", () => {
+            underTitleProjectsSection.classList.remove("change-texts-projects");
+        });
+    });
+
+    // AJOUT STYLE POUR QUE LE TEXTE RESTE SUR LA MEME POSITION LE TEMPS DE LA TRANSITION VERS LE PROJET
+
+    titlesProjectsShowcase.forEach((titleProject, index) => {
+        titlesProjectsShowcase[index].addEventListener("click", () => {
+            underTitleProjectsSection.classList.add(
+                "change-texts-projects-transition"
+            );
+            setTimeout(() => {
+                underTitleProjectsSection.classList.remove(
+                    "change-texts-projects-transition"
+                );
+            }, 1500);
         });
     });
 }

@@ -1,6 +1,6 @@
 @import "../utils/mixins";
 
-/* Mise en page de ma présentation */
+/* MISE EN PAGE SECTION PRESENTATION */
 
 main section h2 {
     @include sectionDesign;
@@ -11,6 +11,7 @@ main section h2 {
 
     & div {
         overflow: hidden;
+        text-align: center;
     }
 
     & h2,
@@ -18,10 +19,13 @@ main section h2 {
         transform: translateY(100%);
     }
 
-    p {
+    & p {
         animation-delay: 0.3s;
+        transition: 0.5s;
     }
 }
+
+// CLASS POUR LE REVEAL DES SECTIONS AU SCROLL
 
 .reveal-text-section {
     animation: revealTextSection 1s ease forwards;
@@ -121,6 +125,8 @@ main section h2 {
         }
     }
 
+    // ANIMATION SCROLLWEEL POUR LE LOGO DE LA SOURIS
+
     @keyframes scrollAnimatedMouse {
         100% {
             top: 55px;
@@ -128,68 +134,19 @@ main section h2 {
         }
     }
 
+    // ANIMATION TEXTE AU CHARGEMENT
+
     @keyframes revealTextPresentation {
         100% {
             transform: translateY(0%);
         }
     }
 
+    // ANIMATION TEXTE "DEVELOPPEUR WEB" POUR L'APPARITION AU CHARGEMENT
+
     @keyframes revealTextPresentationBefore {
         100% {
             opacity: 1;
         }
     }
-
-    // & h1 {
-    //     animation: fallingTitle 1s forwards;
-    //     animation-delay: 4.8s;
-    // }
-
-    // & p {
-    //     visibility: hidden;
-    //     animation: fallingTitle 1s forwards;
-    //     animation-delay: 5.3s;
-    // }
-
-    // @keyframes fallingTitle {
-    //     0% {
-    //         transform: translateY(-80px);
-    //     }
-    //     100% {
-    //         transform: translateY(0px);
-    //         visibility: visible;
-    //     }
-    // }
-
-    // & .title1 {
-    //     overflow: hidden;
-
-    //     & h1 {
-    //         transform: translateY(-80px);
-    //         font-size: 25px;
-    //         font-weight: 200;
-    //     }
-    // }
-
-    // & .title2 {
-    //     overflow: hidden;
-
-    //     & h1 {
-    //         animation: fallingTitle 0.7s forwards;
-    //         font-size: 90px;
-    //         transform: translateY(-105px);
-    //         animation-delay: 5.3s;
-    //     }
-    // }
-
-    // & .title3 {
-    //     font-size: 30px;
-    //     overflow: hidden;
-    //     margin-top: 30px;
-    // }
-
-    // & .presentation-split {
-    //     display: flex;
-    //     justify-content: center;
-    // }
 }
