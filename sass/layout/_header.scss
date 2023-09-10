@@ -1,5 +1,3 @@
-/* Configuration du header */
-
 header {
     width: 100%;
     padding: 40px 130px 0 130px;
@@ -46,25 +44,157 @@ header {
         }
     }
 
-    // & a::after {
-    //     content: "";
-    //     display: block;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: white;
-    //     transition: 0.5s;
-    //     z-index: -2;
-    //     transform: scaleX(0);
-    // }
-    // & a:hover::after {
-    //     transform: scaleX(1);
-    // }
-    // & a:hover {
-    //     color: black;
-    // }
+    & .liens {
+        display: flex;
+        align-items: center;
+
+        & .burger {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+
+            &-container {
+                opacity: 0;
+                pointer-events: none;
+                cursor: pointer;
+                overflow: visible;
+                width: 150px;
+                height: 2.5vh;
+
+                z-index: 450;
+            }
+
+            // ANIMATION DU BURGER A l'ACTIVATION
+
+            &.active-burger.burger::before {
+                animation: animatedBurgerBefore 0.5s ease forwards;
+            }
+
+            &.active-burger.burger::after {
+                animation: animatedBurgerAfter 0.5s ease forwards;
+            }
+
+            &.active-burger .burger-middle-line {
+                animation: animatedBurgerMiddleLine 0.5s ease forwards;
+            }
+
+            @keyframes animatedBurgerBefore {
+                50% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(0deg);
+                }
+
+                100% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(135deg);
+                }
+            }
+            @keyframes animatedBurgerAfter {
+                50% {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(0deg);
+                }
+
+                100% {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(225deg);
+                }
+            }
+            @keyframes animatedBurgerMiddleLine {
+                49% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            // ANIMATION DU BURGER A LA DESACTIVATION
+
+            &.unactive-burger.burger::before {
+                animation: unanimatedBurgerBefore 0.5s ease forwards;
+            }
+            &.unactive-burger.burger::after {
+                animation: unanimatedBurgerAfter 0.5s ease forwards;
+            }
+            &.unactive-burger .burger-middle-line {
+                animation: unanimatedBurgerMiddleLine 0.5s ease forwards;
+            }
+
+            @keyframes unanimatedBurgerBefore {
+                0% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(135deg);
+                }
+                50% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(360deg);
+                }
+                100% {
+                    top: 0%;
+                    transform: translateY(0%) rotate(360deg);
+                }
+            }
+            @keyframes unanimatedBurgerAfter {
+                0% {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(225deg);
+                }
+                50% {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(360deg);
+                }
+                100% {
+                    bottom: 0%;
+                    transform: translateY(0%) rotate(360deg);
+                }
+            }
+            @keyframes unanimatedBurgerMiddleLine {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            &-middle-line {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 2px;
+                background: #ffffff;
+            }
+
+            &::before {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #ffffff;
+                transition: 0.5s;
+            }
+
+            &::after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: #ffffff;
+                transition: 0.5s;
+            }
+        }
+    }
 
     & .portfolio-logo {
         opacity: 0;
@@ -79,10 +209,8 @@ header {
             width: 5vw;
         }
     }
-    & .liens {
-        display: flex;
-        align-items: center;
-    }
+
+    // ANIMATION POUR LE REVEAL DES LIENS ET DU LOGO AU CHARGEMENT DE LA PAGE
 
     @keyframes revealLinks {
         100% {
@@ -94,5 +222,117 @@ header {
         100% {
             opacity: 1;
         }
+    }
+}
+
+// CONFIGURATION DU MENU BURGER
+
+.burger-menu {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: #000000;
+    z-index: 449;
+
+    &-container-links {
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        & div {
+            overflow: hidden;
+        }
+
+        & a {
+            display: inline-block;
+            transform: translateY(100%);
+        }
+
+        // CLASS POUR REVEAL LE TEXT DU MENU BURGER
+
+        .reveal-text-burger {
+            animation: revealTextBurger 0.5s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes revealTextBurger {
+            100% {
+                transform: translateY(0%);
+            }
+        }
+
+        // CLASS POUR UNREVEAL LE TEXT DU MENU BURGER
+
+        .unreveal-text-burger {
+            animation: unrevealTextBurger 0.5s ease forwards;
+        }
+
+        @keyframes unrevealTextBurger {
+            0% {
+                transform: translateY(0%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
+
+.active-burger-menu {
+    animation: activeBurgerMenu 0.5s ease forwards;
+}
+
+@keyframes activeBurgerMenu {
+    100% {
+        height: 100%;
+    }
+}
+
+.unactive-burger-menu {
+    animation: unactiveBurgerMenu 1s ease forwards;
+}
+
+@keyframes unactiveBurgerMenu {
+    0% {
+        height: 100%;
+    }
+    50% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+// REPONSIVE
+
+@media (max-width: 1024px) {
+    header {
+        & .liens a {
+            display: none;
+        }
+
+        & .portfolio-logo {
+            order: -1;
+        }
+
+        & .burger-container {
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+    }
+
+    .burger-menu {
+        opacity: 1;
+        pointer-events: all;
     }
 }

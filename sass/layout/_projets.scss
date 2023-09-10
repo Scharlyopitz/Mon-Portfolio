@@ -2,40 +2,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(235deg, #c9c9c9, #ffffff);
+    // background: linear-gradient(235deg, #c9c9c9, #ffffff);
+    background: #ffffff;
     color: black;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-
-    // & .undertitle-change {
-    //     animation-delay: 0.3s;
-    //     transition: 0.5s;
-    //     transform-origin: bottom;
-    //     transform: translateY(-100%) rotateX(90deg);
-    // }
-
-    // & .p1 p,
-    // .p2 span {
-    //     transform: translateY(100%);
-    // }
-
-    // & .p1 {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     width: 100%;
-    // }
-
-    // & .p2 {
-    //     & span {
-    //         display: inline-block;
-    //         transform-origin: top;
-    //         transform: translateY(100%) rotateX(90deg);
-    //         transition: 0.3s;
-    //     }
-    // }
 
     .undertitle-container {
         height: 20px;
@@ -71,6 +43,20 @@
             transform: translate(-50%, -50%);
             transition: 0.5s ease;
             overflow: hidden;
+
+            &.active-after-transition.projet-image::after {
+                animation: height0 0.5s ease forwards;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: #ffffff;
+            }
 
             & img {
                 width: 100%;
@@ -153,13 +139,13 @@
         }
     }
 
-    .transition-page {
-        animation: height0 0.5s ease forwards;
-    }
+    // .transition-page {
+    //     animation: height0 0.5s ease forwards;
+    // }
 
     @keyframes height0 {
         100% {
-            height: 0;
+            height: 100%;
         }
     }
 
@@ -174,6 +160,19 @@
 
     .opacity1 {
         opacity: 1;
+    }
+
+    .opacity0 {
+        animation: opacity0 0.5s ease forwards;
+    }
+
+    @keyframes opacity0 {
+        99% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 
     .white {
@@ -254,7 +253,7 @@
             content: "";
             width: 100%;
             height: 0;
-            background: #ffffff;
+            background: #eeeeee;
             position: absolute;
             bottom: 0;
             left: 0;

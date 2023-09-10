@@ -83,11 +83,19 @@ export default function scrollReveal() {
 
     // COMPETENCES
 
-    const competences = document.querySelectorAll(".competences-percent");
-
     const competencesContainer = document.querySelector(
         ".competences-container"
     );
+
+    const competences = document.querySelectorAll(".competences-percent");
+
+    const competencesPercentsValues = document.querySelectorAll(
+        ".competences-percent-value"
+    );
+
+    competencesPercentsValues.forEach((competencePercentValue, index) => {
+        competences[index].style.width = `${competencePercentValue.innerHTML}`;
+    });
 
     const transitionDelay = 0.1;
 
