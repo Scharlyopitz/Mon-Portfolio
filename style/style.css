@@ -32,7 +32,14 @@ a {
   text-decoration: none;
 }
 
-/* Configuration du Loader */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
 #loader {
   position: fixed;
   z-index: 900;
@@ -118,6 +125,16 @@ a {
 @keyframes AnimatedPart2 {
   100% {
     transform: translateY(100vh);
+  }
+}
+@media (max-width: 768px) {
+  #loader .part2 img {
+    width: 120px;
+  }
+}
+@media (max-width: 425px) {
+  #loader .part2 img {
+    width: 90px;
   }
 }
 .cursor {
@@ -277,6 +294,8 @@ header .liens .burger-container {
   width: 0px;
   height: 25px;
   z-index: 501;
+  animation: revealLogoAndBurger 1s ease forwards;
+  animation-delay: 5s;
 }
 header .liens .burger.active-burger.burger::before {
   animation: animatedBurgerBefore 0.5s ease forwards;
@@ -398,7 +417,7 @@ header .portfolio-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: revealLogo 1s ease forwards;
+  animation: revealLogoAndBurger 1s ease forwards;
   animation-delay: 5s;
 }
 header .portfolio-logo img {
@@ -409,7 +428,7 @@ header .portfolio-logo img {
     transform: translateY(0%);
   }
 }
-@keyframes revealLogo {
+@keyframes revealLogoAndBurger {
   100% {
     opacity: 1;
   }
@@ -508,7 +527,6 @@ header .portfolio-logo img {
     width: 50px;
   }
   header .burger-container {
-    opacity: 1 !important;
     pointer-events: all !important;
     width: 150px !important;
   }

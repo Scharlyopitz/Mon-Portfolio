@@ -30,6 +30,7 @@ export default function header() {
         burger.classList.toggle("unactive-burger");
         burgerMenu.classList.toggle("active-burger-menu");
         burgerMenu.classList.toggle("unactive-burger-menu");
+        body.classList.toggle("overflow-hidden");
         burgerMenuLinks.forEach((burgerMenuLink) => {
             burgerMenuLink.classList.toggle("reveal-text-burger");
             burgerMenuLink.classList.toggle("unreveal-text-burger");
@@ -38,12 +39,11 @@ export default function header() {
 
     burgerMenuLinks.forEach((burgerMenuLink) => {
         burgerMenuLink.addEventListener("click", () => {
-            setTimeout(() => {
-                burger.classList.toggle("active-burger");
-                burger.classList.toggle("unactive-burger");
-                burgerMenu.classList.toggle("active-burger-menu");
-                burgerMenu.classList.toggle("unactive-burger-menu");
-            }, 600);
+            burger.classList.toggle("active-burger");
+            burger.classList.toggle("unactive-burger");
+            burgerMenu.classList.toggle("active-burger-menu");
+            burgerMenu.classList.toggle("unactive-burger-menu");
+            body.classList.toggle("overflow-hidden");
             burgerMenuLinks.forEach((burger) => {
                 burger.classList.toggle("reveal-text-burger");
                 burger.classList.toggle("unreveal-text-burger");

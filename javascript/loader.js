@@ -4,7 +4,7 @@ export default function loader() {
     const loader = document.querySelector("#loader");
 
     setTimeout(() => {
-        body.style.overflow = "visible";
+        body.classList.add("overflow-visible");
     }, 4500);
 
     setTimeout(() => {
