@@ -72,6 +72,8 @@
             }
         }
 
+        // ANIMATION POUR LES TEXTES MOBILE
+
         @keyframes AnimateText1 {
             0% {
                 transform: translateX(-100%);
@@ -119,6 +121,8 @@
             }
         }
 
+        // CLASS APPARITION DE LA BIOGRAPHIE AU SCROLL
+
         .ApparitionTexteBtiographie {
             animation: ApparitionTexteBtiographie 1s ease-in forwards;
         }
@@ -137,6 +141,8 @@
     }
 }
 
+// CLASS POUR LE DESIGN DES TEXTES MOBILE
+
 .stroke {
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
@@ -148,4 +154,51 @@
 
 .italic {
     font-style: italic;
+}
+
+// MEDIA QUERY
+
+@media (max-width: 1024px) {
+    #apropos {
+        & .biographie {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #apropos {
+        & a {
+            bottom: 40px;
+            width: 25px;
+            height: 25px;
+        }
+
+        & .container-animate-text {
+            margin: 120px 0 0;
+            & .copy1-wrap,
+            .copy2-wrap,
+            .copy3-wrap {
+                font-size: 85px;
+                line-height: 80px;
+            }
+        }
+
+        & .biographie {
+            padding: 0 30px;
+            letter-spacing: normal;
+            font-size: 15px;
+            &-trait {
+                height: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #apropos {
+        & .biographie {
+            font-size: 14px;
+        }
+    }
 }

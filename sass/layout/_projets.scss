@@ -454,3 +454,64 @@
         }
     }
 }
+
+// MEDIA QUERY
+
+@media (max-width: 425px) {
+    #projets {
+        & .projet-container {
+            flex-direction: column;
+            margin: 0;
+            height: 75vh;
+            &-text {
+                color: black;
+                &-number {
+                    line-height: 2;
+                    font-size: 15px;
+                }
+
+                &-name {
+                    font-size: 18px;
+                    & span::after {
+                        width: 0;
+                    }
+                }
+            }
+        }
+
+        & .undertitle-change span {
+            font-size: 3vw;
+        }
+
+        & .projet-image {
+            display: none;
+        }
+
+        & .half-section {
+            width: 100%;
+
+            &-title {
+                font-size: 25vw;
+                text-align: center;
+            }
+
+            &-description p {
+                font-size: 5vw;
+                padding: 0 5px;
+            }
+
+            &-button-container {
+                width: 100%;
+                justify-content: space-around;
+
+                & .under-btn {
+                    width: 25%;
+                }
+            }
+
+            & .btn a {
+                padding: 0;
+            }
+        }
+    }
+}

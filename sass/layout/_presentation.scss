@@ -1,6 +1,6 @@
 @import "../utils/mixins";
 
-/* MISE EN PAGE SECTION PRESENTATION */
+// MISE EN PAGE DU TEXTE DES SECTIONS
 
 main section h2 {
     @include sectionDesign;
@@ -25,7 +25,7 @@ main section h2 {
     }
 }
 
-// CLASS POUR LE REVEAL DES SECTIONS AU SCROLL
+// CLASS ANIMATION POUR LE REVEAL DES SECTIONS AU SCROLL
 
 .reveal-text-section {
     animation: revealTextSection 1s ease forwards;
@@ -42,7 +42,6 @@ main section h2 {
     display: flex;
     flex-direction: column;
     min-height: 90vh;
-    padding: var(--padding-section);
 
     & .presentation-nom {
         position: relative;
@@ -51,6 +50,7 @@ main section h2 {
         justify-content: center;
         display: flex;
         padding-top: 20vh;
+        flex-wrap: wrap;
 
         & div {
             overflow: hidden;
@@ -61,6 +61,24 @@ main section h2 {
             display: block;
             animation: revealTextPresentation 1s ease forwards;
             animation-delay: 5.5s;
+        }
+
+        & div:nth-child(1) {
+            position: relative;
+
+            &::before {
+                content: " Développeur Front-End.";
+                font-size: 0 !important;
+                opacity: 0;
+                font-size: 11px;
+                letter-spacing: 0;
+                text-transform: initial;
+                position: absolute;
+                right: 0;
+                color: white;
+                animation: revealTextPresentationBefore 1s ease forwards;
+                animation-delay: 5.5s;
+            }
         }
 
         & div:nth-child(2) {
@@ -88,6 +106,8 @@ main section h2 {
         }
     }
 
+    // CONFIGURATION LOGO SCROLL DOWN
+
     & .container-scroll-logo {
         opacity: 0;
         position: absolute;
@@ -99,6 +119,16 @@ main section h2 {
         transform: translateX(-50%);
         animation: revealTextPresentationBefore 1s ease forwards;
         animation-delay: 5s;
+
+        & .container-scroll-logo-text {
+            position: relative;
+        }
+
+        & .scroll-btn-mobil {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+        }
 
         & .scroll-btn {
             position: relative;
@@ -134,7 +164,7 @@ main section h2 {
         }
     }
 
-    // ANIMATION TEXTE AU CHARGEMENT
+    // ANIMATION NOM-PRENOM AU CHARGEMENT
 
     @keyframes revealTextPresentation {
         100% {
@@ -142,11 +172,102 @@ main section h2 {
         }
     }
 
-    // ANIMATION TEXTE "DEVELOPPEUR WEB" POUR L'APPARITION AU CHARGEMENT
+    // ANIMATION TEXTE "DEVELOPPEUR WEB" AU CHARGEMENT
 
     @keyframes revealTextPresentationBefore {
         100% {
             opacity: 1;
+        }
+    }
+}
+
+// MEDIA QUERY
+
+@media (max-width: 768px) {
+    #presentation {
+        & .presentation-nom {
+            font-size: 80px;
+            & div:nth-child(2)::before {
+                font-size: 11px;
+            }
+        }
+
+        // CONFIGURATION BOUTTON SCROLL
+
+        & .container-scroll-logo {
+            & p {
+                opacity: 0;
+            }
+
+            & .scroll-btn-mobil {
+                opacity: 1;
+            }
+
+            & .scroll-btn {
+                width: 45px;
+                height: 75px;
+                border-color: transparent;
+
+                &-dot {
+                    top: 80%;
+                    animation: dragAndDrop 2s infinite;
+                    width: 15px;
+                    height: 15px;
+                }
+
+                @keyframes dragAndDrop {
+                    100% {
+                        top: 20%;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    main section h2 {
+        font-size: 11vw;
+    }
+
+    .text-section {
+        padding-top: 50px;
+
+        & p {
+            font-size: 3vw;
+        }
+    }
+
+    #presentation {
+        & .presentation-nom {
+            font-size: 20vw;
+            & div:nth-child(1) {
+                &::before {
+                    font-size: 2.7vw !important;
+                }
+
+                & span {
+                    transform: translateY(100%);
+                }
+            }
+            & div:nth-child(2) {
+                margin-left: 0;
+
+                &::before {
+                    opacity: 0 !important;
+                }
+
+                & span {
+                    transform: translateY(-100%);
+                }
+            }
+        }
+
+        // CONFIGURATION BOUTTON SCROLL
+
+        & .container-scroll-logo {
+            bottom: 5vh;
         }
     }
 }

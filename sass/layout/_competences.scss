@@ -74,3 +74,24 @@
         transform: rotate(45deg);
     }
 }
+
+// MEDIA QUERY
+
+@media (max-width: 425px) {
+    #competences {
+        & a {
+            bottom: 40px;
+            width: 25px;
+            height: 25px;
+        }
+
+        & .competences-container {
+            width: 100%;
+            margin: 60px 0 0 0;
+
+            & div {
+                font-size: 4vw;
+            }
+        }
+    }
+}

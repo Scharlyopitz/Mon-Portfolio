@@ -189,7 +189,7 @@ a {
   pointer-events: none;
   mix-blend-mode: difference;
   transition: 0.5s;
-  z-index: 450;
+  z-index: 500;
 }
 #Home-btn i {
   position: absolute;
@@ -235,6 +235,27 @@ a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 425px) {
+  #Home-btn {
+    mix-blend-mode: normal;
+    bottom: 15px;
+    right: 15px;
+  }
+  #Home-btn i {
+    background: black;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+  }
+  #Home-btn .circulare-text {
+    width: 40px;
+    height: 40px;
+  }
+  #Home-btn .text {
+    opacity: 0;
   }
 }
 header {
@@ -550,7 +571,6 @@ footer {
   text-transform: initial;
 }
 
-/* MISE EN PAGE SECTION PRESENTATION */
 main section h2 {
   font-size: 65px;
   font-weight: 800;
@@ -589,7 +609,6 @@ main section h2 {
   display: flex;
   flex-direction: column;
   min-height: 90vh;
-  padding: var(--padding-section);
 }
 #presentation .presentation-nom {
   position: relative;
@@ -598,6 +617,7 @@ main section h2 {
   justify-content: center;
   display: flex;
   padding-top: 20vh;
+  flex-wrap: wrap;
 }
 #presentation .presentation-nom div {
   overflow: hidden;
@@ -606,6 +626,22 @@ main section h2 {
   transform: translateY(-100%);
   display: block;
   animation: revealTextPresentation 1s ease forwards;
+  animation-delay: 5.5s;
+}
+#presentation .presentation-nom div:nth-child(1) {
+  position: relative;
+}
+#presentation .presentation-nom div:nth-child(1)::before {
+  content: " Développeur Front-End.";
+  font-size: 0 !important;
+  opacity: 0;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: initial;
+  position: absolute;
+  right: 0;
+  color: white;
+  animation: revealTextPresentationBefore 1s ease forwards;
   animation-delay: 5.5s;
 }
 #presentation .presentation-nom div:nth-child(2) {
@@ -640,6 +676,14 @@ main section h2 {
   transform: translateX(-50%);
   animation: revealTextPresentationBefore 1s ease forwards;
   animation-delay: 5s;
+}
+#presentation .container-scroll-logo .container-scroll-logo-text {
+  position: relative;
+}
+#presentation .container-scroll-logo .scroll-btn-mobil {
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 #presentation .container-scroll-logo .scroll-btn {
   position: relative;
@@ -679,6 +723,69 @@ main section h2 {
   }
 }
 
+@media (max-width: 768px) {
+  #presentation .presentation-nom {
+    font-size: 80px;
+  }
+  #presentation .presentation-nom div:nth-child(2)::before {
+    font-size: 11px;
+  }
+  #presentation .container-scroll-logo p {
+    opacity: 0;
+  }
+  #presentation .container-scroll-logo .scroll-btn-mobil {
+    opacity: 1;
+  }
+  #presentation .container-scroll-logo .scroll-btn {
+    width: 45px;
+    height: 75px;
+    border-color: transparent;
+  }
+  #presentation .container-scroll-logo .scroll-btn-dot {
+    top: 80%;
+    animation: dragAndDrop 2s infinite;
+    width: 15px;
+    height: 15px;
+  }
+  @keyframes dragAndDrop {
+    100% {
+      top: 20%;
+      opacity: 0;
+    }
+  }
+}
+@media (max-width: 425px) {
+  main section h2 {
+    font-size: 11vw;
+  }
+  .text-section {
+    padding-top: 50px;
+  }
+  .text-section p {
+    font-size: 3vw;
+  }
+  #presentation .presentation-nom {
+    font-size: 20vw;
+  }
+  #presentation .presentation-nom div:nth-child(1)::before {
+    font-size: 2.7vw !important;
+  }
+  #presentation .presentation-nom div:nth-child(1) span {
+    transform: translateY(100%);
+  }
+  #presentation .presentation-nom div:nth-child(2) {
+    margin-left: 0;
+  }
+  #presentation .presentation-nom div:nth-child(2)::before {
+    opacity: 0 !important;
+  }
+  #presentation .presentation-nom div:nth-child(2) span {
+    transform: translateY(-100%);
+  }
+  #presentation .container-scroll-logo {
+    bottom: 5vh;
+  }
+}
 /* Mise en page des icons */
 .icon-contact {
   margin-top: 110px;
@@ -803,6 +910,20 @@ main section h2 {
   transform: rotate(45deg);
 }
 
+@media (max-width: 425px) {
+  #competences a {
+    bottom: 40px;
+    width: 25px;
+    height: 25px;
+  }
+  #competences .competences-container {
+    width: 100%;
+    margin: 60px 0 0 0;
+  }
+  #competences .competences-container div {
+    font-size: 4vw;
+  }
+}
 #apropos {
   overflow: hidden;
 }
@@ -933,6 +1054,40 @@ main section h2 {
   font-style: italic;
 }
 
+@media (max-width: 1024px) {
+  #apropos .biographie {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  #apropos a {
+    bottom: 40px;
+    width: 25px;
+    height: 25px;
+  }
+  #apropos .container-animate-text {
+    margin: 120px 0 0;
+  }
+  #apropos .container-animate-text .copy1-wrap,
+  #apropos .container-animate-text .copy2-wrap,
+  #apropos .container-animate-text .copy3-wrap {
+    font-size: 85px;
+    line-height: 80px;
+  }
+  #apropos .biographie {
+    padding: 0 30px;
+    letter-spacing: normal;
+    font-size: 15px;
+  }
+  #apropos .biographie-trait {
+    height: 0px;
+  }
+}
+@media (max-width: 425px) {
+  #apropos .biographie {
+    font-size: 14px;
+  }
+}
 #contact {
   min-height: var(--height-section);
   display: flex;
@@ -1377,6 +1532,53 @@ main section h2 {
   }
 }
 
+@media (max-width: 425px) {
+  #projets .projet-container {
+    flex-direction: column;
+    margin: 0;
+    height: 75vh;
+  }
+  #projets .projet-container-text {
+    color: black;
+  }
+  #projets .projet-container-text-number {
+    line-height: 2;
+    font-size: 15px;
+  }
+  #projets .projet-container-text-name {
+    font-size: 18px;
+  }
+  #projets .projet-container-text-name span::after {
+    width: 0;
+  }
+  #projets .undertitle-change span {
+    font-size: 3vw;
+  }
+  #projets .projet-image {
+    display: none;
+  }
+  #projets .half-section {
+    width: 100%;
+  }
+  #projets .half-section-title {
+    font-size: 25vw;
+    text-align: center;
+  }
+  #projets .half-section-description p {
+    font-size: 5vw;
+    padding: 0 5px;
+  }
+  #projets .half-section-button-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+  #projets .half-section-button-container .under-btn {
+    width: 25%;
+  }
+  #projets .half-section .btn a {
+    padding: 0;
+  }
+}
 :root {
   --height-section: 100vh;
   --padding-section: 0 130px;

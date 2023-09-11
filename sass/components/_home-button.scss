@@ -6,7 +6,7 @@
     pointer-events: none;
     mix-blend-mode: difference;
     transition: 0.5s;
-    z-index: 450;
+    z-index: 500;
 
     & i {
         position: absolute;
@@ -50,11 +50,40 @@
     }
 }
 
+// CLASS POUR ANIMER LE TEXTE AUTOUR DU BOUTTON
+
 @keyframes textRotation {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+// MEDIA QUERY
+
+@media (max-width: 425px) {
+    #Home-btn {
+        mix-blend-mode: normal;
+        bottom: 15px;
+        right: 15px;
+
+        & i {
+            background: black;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+        }
+
+        & .circulare-text {
+            width: 40px;
+            height: 40px;
+        }
+
+        & .text {
+            opacity: 0;
+        }
     }
 }
