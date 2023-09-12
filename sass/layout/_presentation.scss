@@ -226,7 +226,7 @@ main section h2 {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     main section h2 {
         font-size: 11vw;
     }
@@ -239,12 +239,21 @@ main section h2 {
         }
     }
 
+    // CONFIGURATION BOUTTON SCROLL
+
+    #presentation {
+        & .container-scroll-logo {
+            bottom: 80px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
     #presentation {
         & .presentation-nom {
-            font-size: 20vw;
             & div:nth-child(1) {
                 &::before {
-                    font-size: 2.7vw !important;
+                    font-size: 12px !important;
                 }
 
                 & span {
@@ -252,8 +261,6 @@ main section h2 {
                 }
             }
             & div:nth-child(2) {
-                margin-left: 0;
-
                 &::before {
                     opacity: 0 !important;
                 }
@@ -263,11 +270,17 @@ main section h2 {
                 }
             }
         }
+    }
+}
 
-        // CONFIGURATION BOUTTON SCROLL
+@media (max-width: 425px) {
+    #presentation {
+        & .presentation-nom {
+            font-size: 20vw;
 
-        & .container-scroll-logo {
-            bottom: 5vh;
+            & div:nth-child(2) {
+                margin-left: 0;
+            }
         }
     }
 }

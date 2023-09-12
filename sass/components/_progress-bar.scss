@@ -6,10 +6,16 @@
     left: 0;
     mix-blend-mode: difference;
     z-index: 455;
+
+    & .percent {
+        width: 0;
+        height: 4px;
+        background-color: white;
+    }
 }
 
-.percent {
-    width: 0;
-    height: 4px;
-    background-color: white;
+@media (max-width: 768px) {
+    .progress {
+        display: none;
+    }
 }

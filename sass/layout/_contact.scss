@@ -5,7 +5,7 @@
     align-items: center;
 
     .container-contact-logo {
-        margin-top: 20vh;
+        margin-top: 25vh;
         display: flex;
         width: 60%;
         justify-content: space-around;
@@ -76,6 +76,39 @@
 
         & p {
             font-size: 2em;
+        }
+    }
+}
+
+// MEDIA QUERY
+
+@media (max-width: 768px) {
+    #contact {
+        & .container-contact-logo {
+            width: 100%;
+            & p {
+                font-size: 20px;
+            }
+
+            & i {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    #contact {
+        & .container-contact-logo {
+            margin-top: 30vh;
+
+            & p {
+                font-size: 15px;
+            }
+
+            & i {
+                font-size: 45px;
+            }
         }
     }
 }

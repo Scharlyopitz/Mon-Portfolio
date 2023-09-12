@@ -328,7 +328,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        padding: 40px 50px 0;
+        padding: 20px 20px 0;
         & .liens a {
             opacity: 0;
             pointer-events: none;
@@ -354,8 +354,8 @@ header {
     }
 }
 
-@media (max-width: 425px) {
-    header {
-        padding: 20px 20px 0;
-    }
-}
+// @media (max-width: 425px) {
+//     header {
+//         padding: 20px 20px 0;
+//     }
+// }

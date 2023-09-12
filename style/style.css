@@ -174,13 +174,17 @@ a {
   mix-blend-mode: difference;
   z-index: 455;
 }
-
-.percent {
+.progress .percent {
   width: 0;
   height: 4px;
   background-color: white;
 }
 
+@media (max-width: 768px) {
+  .progress {
+    display: none;
+  }
+}
 #Home-btn {
   position: fixed;
   bottom: 40px;
@@ -237,7 +241,7 @@ a {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   #Home-btn {
     mix-blend-mode: normal;
     bottom: 15px;
@@ -535,7 +539,7 @@ header .portfolio-logo img {
 }
 @media (max-width: 768px) {
   header {
-    padding: 40px 50px 0;
+    padding: 20px 20px 0;
   }
   header .liens a {
     opacity: 0;
@@ -556,11 +560,6 @@ header .portfolio-logo img {
     pointer-events: all;
   }
 }
-@media (max-width: 425px) {
-  header {
-    padding: 20px 20px 0;
-  }
-}
 footer {
   position: absolute;
   bottom: 0;
@@ -569,8 +568,14 @@ footer {
   width: 100%;
   padding: 40px 0;
   text-transform: initial;
+  text-align: center;
 }
 
+@media (max-width: 425px) {
+  footer {
+    font-size: 14px;
+  }
+}
 main section h2 {
   font-size: 65px;
   font-weight: 800;
@@ -754,7 +759,7 @@ main section h2 {
     }
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   main section h2 {
     font-size: 11vw;
   }
@@ -764,17 +769,16 @@ main section h2 {
   .text-section p {
     font-size: 3vw;
   }
-  #presentation .presentation-nom {
-    font-size: 20vw;
+  #presentation .container-scroll-logo {
+    bottom: 80px;
   }
+}
+@media (max-width: 575px) {
   #presentation .presentation-nom div:nth-child(1)::before {
-    font-size: 2.7vw !important;
+    font-size: 12px !important;
   }
   #presentation .presentation-nom div:nth-child(1) span {
     transform: translateY(100%);
-  }
-  #presentation .presentation-nom div:nth-child(2) {
-    margin-left: 0;
   }
   #presentation .presentation-nom div:nth-child(2)::before {
     opacity: 0 !important;
@@ -782,8 +786,13 @@ main section h2 {
   #presentation .presentation-nom div:nth-child(2) span {
     transform: translateY(-100%);
   }
-  #presentation .container-scroll-logo {
-    bottom: 5vh;
+}
+@media (max-width: 425px) {
+  #presentation .presentation-nom {
+    font-size: 20vw;
+  }
+  #presentation .presentation-nom div:nth-child(2) {
+    margin-left: 0;
   }
 }
 /* Mise en page des icons */
@@ -910,18 +919,17 @@ main section h2 {
   transform: rotate(45deg);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   #competences a {
-    bottom: 40px;
     width: 25px;
     height: 25px;
   }
   #competences .competences-container {
     width: 100%;
-    margin: 60px 0 0 0;
+    margin: 50px 0 0 0;
   }
   #competences .competences-container div {
-    font-size: 4vw;
+    font-size: 11px;
   }
 }
 #apropos {
@@ -1061,7 +1069,6 @@ main section h2 {
 }
 @media (max-width: 768px) {
   #apropos a {
-    bottom: 40px;
     width: 25px;
     height: 25px;
   }
@@ -1095,7 +1102,7 @@ main section h2 {
   align-items: center;
 }
 #contact .container-contact-logo {
-  margin-top: 20vh;
+  margin-top: 25vh;
   display: flex;
   width: 60%;
   justify-content: space-around;
@@ -1147,6 +1154,28 @@ main section h2 {
   font-size: 2em;
 }
 
+@media (max-width: 768px) {
+  #contact .container-contact-logo {
+    width: 100%;
+  }
+  #contact .container-contact-logo p {
+    font-size: 20px;
+  }
+  #contact .container-contact-logo i {
+    font-size: 50px;
+  }
+}
+@media (max-width: 425px) {
+  #contact .container-contact-logo {
+    margin-top: 30vh;
+  }
+  #contact .container-contact-logo p {
+    font-size: 15px;
+  }
+  #contact .container-contact-logo i {
+    font-size: 45px;
+  }
+}
 #projets {
   display: flex;
   align-items: center;
@@ -1304,6 +1333,7 @@ main section h2 {
   right: 5%;
   cursor: pointer;
   transform: rotate(270deg);
+  z-index: 3;
 }
 #projets .arrow-back::before {
   content: "";
@@ -1399,7 +1429,6 @@ main section h2 {
 #projets .half-section-title {
   font-size: 12vw;
   line-height: 0.8;
-  padding-top: 5vw;
 }
 #projets .half-section-text-container {
   height: 100%;
@@ -1532,11 +1561,11 @@ main section h2 {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   #projets .projet-container {
     flex-direction: column;
     margin: 0;
-    height: 75vh;
+    height: 67vh;
   }
   #projets .projet-container-text {
     color: black;
@@ -1560,9 +1589,12 @@ main section h2 {
   #projets .half-section {
     width: 100%;
   }
+  #projets .half-section-text-container {
+    height: 95%;
+    text-align: center;
+  }
   #projets .half-section-title {
     font-size: 25vw;
-    text-align: center;
   }
   #projets .half-section-description p {
     font-size: 5vw;

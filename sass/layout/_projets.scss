@@ -187,6 +187,7 @@
         right: 5%;
         cursor: pointer;
         transform: rotate(270deg);
+        z-index: 3;
 
         &::before {
             content: "";
@@ -292,9 +293,7 @@
 
         &-title {
             font-size: 12vw;
-
             line-height: 0.8;
-            padding-top: 5vw;
         }
 
         &-text-container {
@@ -457,12 +456,12 @@
 
 // MEDIA QUERY
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
     #projets {
         & .projet-container {
             flex-direction: column;
             margin: 0;
-            height: 75vh;
+            height: 67vh;
             &-text {
                 color: black;
                 &-number {
@@ -490,9 +489,13 @@
         & .half-section {
             width: 100%;
 
+            &-text-container {
+                height: 95%;
+                text-align: center;
+            }
+
             &-title {
                 font-size: 25vw;
-                text-align: center;
             }
 
             &-description p {
