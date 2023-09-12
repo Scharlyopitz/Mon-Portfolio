@@ -342,7 +342,6 @@ header {
         }
 
         & .burger-container {
-            // opacity: 1 !important;
             pointer-events: all !important;
             width: 150px !important;
         }
@@ -353,9 +352,3 @@ header {
         pointer-events: all;
     }
 }
-
-// @media (max-width: 425px) {
-//     header {
-//         padding: 20px 20px 0;
-//     }
-// }
